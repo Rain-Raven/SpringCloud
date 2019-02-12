@@ -25,21 +25,21 @@ public class RandomStringUtil {
         return  string.toString();
     }
 
-    public static RandomStringUtilBuilder builder(){
+    public static RandomStringUtilBuilder build(){
         return new RandomStringUtilBuilder();
     }
 
     public static void main(String[] args) {
         for (int i = 0; i < 20; i++) {
-            String string = RandomStringUtil.builder().letters().numbers().create().getRandomString(i);
+            String string = RandomStringUtil.build().letters().numbers().create().getRandomString(i);
             System.out.println(string);
         }
         for (int i = 0; i < 20; i++) {
-            String string = RandomStringUtil.builder().lowercaseLetters().numbers().create().getRandomString(i);
+            String string = RandomStringUtil.build().lowercaseLetters().numbers().create().getRandomString(i);
             System.out.println(string);
         }
         for (int i = 0; i < 20; i++) {
-            String string = RandomStringUtil.builder().CapitalLetters().numbers().create().getRandomString(i);
+            String string = RandomStringUtil.build().CapitalLetters().numbers().create().getRandomString(i);
             System.out.println(string);
         }
     }
