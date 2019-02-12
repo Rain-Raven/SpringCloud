@@ -1,4 +1,4 @@
-package com.zxa.util;
+package com.zxa.utils;
 
 import org.springframework.util.StringUtils;
 
@@ -25,22 +25,8 @@ public class RandomStringUtil {
         return  string.toString();
     }
 
-    public static RandomStringUtilBuilder build(){
-        return new RandomStringUtilBuilder();
+    public static RandomStringUtilFactory builder(){
+        return new RandomStringUtilFactory();
     }
 
-    public static void main(String[] args) {
-        for (int i = 0; i < 20; i++) {
-            String string = RandomStringUtil.build().letters().numbers().create().getRandomString(i);
-            System.out.println(string);
-        }
-        for (int i = 0; i < 20; i++) {
-            String string = RandomStringUtil.build().lowercaseLetters().numbers().create().getRandomString(i);
-            System.out.println(string);
-        }
-        for (int i = 0; i < 20; i++) {
-            String string = RandomStringUtil.build().CapitalLetters().numbers().create().getRandomString(i);
-            System.out.println(string);
-        }
-    }
 }
