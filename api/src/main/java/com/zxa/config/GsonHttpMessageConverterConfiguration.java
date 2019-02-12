@@ -9,14 +9,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.json.GsonHttpMessageConverter;
 
-@Configuration
+//@Configuration
 @ConditionalOnClass(Gson.class)
 //@ConditionalOnMissingClass(name = "com.fasterxml.jackson.core.JsonGenerator")
 @ConditionalOnBean(Gson.class)
 public  class GsonHttpMessageConverterConfiguration {
 
-    @Bean
-    @ConditionalOnMissingBean
+    /*@Bean
+    @ConditionalOnMissingBean*/
     public GsonHttpMessageConverter gsonHttpMessageConverter(Gson standardGson) {
         GsonHttpMessageConverter converter = new GsonHttpMessageConverter();
         converter.setGson(standardGson);
