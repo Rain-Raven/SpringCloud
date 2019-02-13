@@ -7,12 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api" />
-        <module name="consumers" />
         <module name="controlCenter" />
         <module name="email" />
         <module name="eureka" />
-        <module name="producers" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="consumers" target="1.8" />
+      <module name="producers" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
