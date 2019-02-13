@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="66f40457-e1dd-4269-8faa-bdeee26a0f71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtilFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtilFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controlCenter/src/main/java/com/zxa/controller/CertificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controlCenter/src/main/java/com/zxa/controller/CertificationController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/eureka/target/" />
@@ -19,6 +19,20 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-905338217">
@@ -36,7 +50,7 @@
           <entry key="Java8DateTimeTest" value="1" />
           <entry key="class" value="30" />
           <entry key="html" value="1" />
-          <entry key="java" value="76" />
+          <entry key="java" value="79" />
           <entry key="pom" value="1" />
           <entry key="properties" value="5" />
           <entry key="xml" value="15" />
@@ -47,7 +61,7 @@
         <counts>
           <entry key="CLASS" value="31" />
           <entry key="HTML" value="1" />
-          <entry key="JAVA" value="73" />
+          <entry key="JAVA" value="76" />
           <entry key="Properties" value="5" />
           <entry key="Scratch" value="3" />
           <entry key="XML" value="16" />
@@ -59,9 +73,9 @@
           <entry key="Java8DateTimeTest" value="6" />
           <entry key="dummy" value="5" />
           <entry key="html" value="230" />
-          <entry key="java" value="4274" />
+          <entry key="java" value="4297" />
           <entry key="properties" value="10" />
-          <entry key="txt" value="16" />
+          <entry key="txt" value="18" />
           <entry key="xml" value="68" />
           <entry key="yml" value="334" />
         </counts>
@@ -70,8 +84,8 @@
         <counts>
           <entry key="CLASS" value="6" />
           <entry key="HTML" value="230" />
-          <entry key="JAVA" value="4274" />
-          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="JAVA" value="4297" />
+          <entry key="PLAIN_TEXT" value="23" />
           <entry key="Properties" value="10" />
           <entry key="XML" value="68" />
           <entry key="YAML" value="334" />
@@ -81,11 +95,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controlCenter/src/main/java/com/zxa/controller/CertificationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="200">
+              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,7 +119,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/email/src/main/java/com/zxa/service/MailService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="657">
               <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -114,23 +128,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtil.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtilFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="158">
+              <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtilFactory.java">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="17" column="49" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="49" />
+            <state relative-caret-position="150">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#266#267#0" expanded="true" />
+                <element signature="e#318#319#0" expanded="true" />
+                <element signature="e#872#873#0" expanded="true" />
+                <element signature="e#924#925#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,6 +174,7 @@
       <find>log</find>
       <find>info</find>
       <find>123456</find>
+      <find>create</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -172,7 +191,6 @@
         <option value="$PROJECT_DIR$/api/src/test/java/com/zxa/test/RandomStringTest.java" />
         <option value="$PROJECT_DIR$/api/src/test/java/com/zxa/util/RandomStringTest.java" />
         <option value="$PROJECT_DIR$/api/src/test/java/com/zxa/entitis/gson.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtil.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/zxa/config/aa.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/zxa/config/FastJson2JsonRedisSerializer.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/zxa/config/FastJsonRedisSerializer.java" />
@@ -210,8 +228,9 @@
         <option value="$PROJECT_DIR$/api/src/main/java/com/zxa/service/EmailService.java" />
         <option value="$PROJECT_DIR$/controlCenter/src/main/java/com/zxa/config/RestTemplateConfig.java" />
         <option value="$PROJECT_DIR$/controlCenter/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtilFactory.java" />
         <option value="$PROJECT_DIR$/controlCenter/src/main/java/com/zxa/controller/CertificationController.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtil.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtilFactory.java" />
       </list>
     </option>
   </component>
@@ -473,7 +492,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550046330916" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550052353941" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/api/src/main/java/com/zxa/controller" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -602,7 +621,7 @@
       <updated>1549935865171</updated>
       <workItem from="1549935866304" duration="4887000" />
       <workItem from="1549940783217" duration="22390000" />
-      <workItem from="1550018785855" duration="22558000" />
+      <workItem from="1550018785855" duration="24404000" />
     </task>
     <task id="LOCAL-00001" summary="(￣▽￣)~*">
       <created>1549940874087</created>
@@ -674,7 +693,14 @@
       <option name="project" value="LOCAL" />
       <updated>1550045170405</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="修改了命名">
+      <created>1550047796878</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1550047796878</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -710,7 +736,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49835000" />
+    <option name="totallyTimeSpent" value="51681000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -753,9 +779,9 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Maven Projects" order="5" weight="0.32980332" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32980332" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.32980332" />
     </layout>
   </component>
@@ -770,7 +796,8 @@
     <MESSAGE value="完成初步的整合" />
     <MESSAGE value="11" />
     <MESSAGE value="修改了连接延迟" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了连接延迟" />
+    <MESSAGE value="修改了命名" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了命名" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1159,9 +1186,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controlCenter/src/main/java/com/zxa/controller/CertificationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/email/src/main/java/com/zxa/service/MailService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="657">
           <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1171,28 +1208,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        <state relative-caret-position="150">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#266#267#0" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#924#925#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtilFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="17" column="49" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlCenter/src/main/java/com/zxa/controller/CertificationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="158">
+          <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
         </state>
       </provider>
     </entry>
