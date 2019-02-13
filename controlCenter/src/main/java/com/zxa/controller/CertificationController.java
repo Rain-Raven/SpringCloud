@@ -19,7 +19,7 @@ public class CertificationController {
     @Autowired
     RedisTemplate redisTemplate;
 
-    private RandomStringUtil randomStringUtil=RandomStringUtil.builder().CapitalLetters().numbers().create();
+    private RandomStringUtil randomStringUtil=RandomStringUtil.builder().capitalLetters().numbers().create();
 
     @ResponseBody
     @RequestMapping(value = "/getEmailCaptcha",method = {RequestMethod.GET,RequestMethod.POST})

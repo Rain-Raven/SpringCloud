@@ -15,7 +15,7 @@ public class RandomStringUtilFactory {
         return String(LOWERCASE_LETTERS);
     }
 
-    public RandomStringUtilFactory CapitalLetters() {
+    public RandomStringUtilFactory capitalLetters() {
         return String(CAPITAL_LETTERS);
     }
 

@@ -2,46 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66f40457-e1dd-4269-8faa-bdeee26a0f71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/classes/com/zxa/config/GsonConfig$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/classes/com/zxa/config/GsonConfig$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/classes/com/zxa/config/GsonConfig$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/classes/com/zxa/config/GsonConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/classes/com/zxa/config/GsonHttpMessageConverterConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/classes/com/zxa/config/ObjectMapperConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/classes/com/zxa/config/RedisConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/classes/com/zxa/entitis/Parameter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/classes/com/zxa/entitis/Person.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/classes/com/zxa/entitis/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/classes/com/zxa/service/EmailService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/classes/com/zxa/utils/RandomStringUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/classes/com/zxa/utils/RandomStringUtilFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/target/root.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controlCenter/target/classes/com/zxa/ControlCenterApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controlCenter/target/classes/com/zxa/config/RestTemplateConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controlCenter/target/classes/com/zxa/controller/CertificationController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email/target/classes/com/zxa/EmailApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email/target/classes/com/zxa/controller/EmailController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email/target/classes/com/zxa/service/MailService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email/target/classes/com/zxa/service/TemplateService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email/target/classes/templates/bindingEmail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka/target/classes/com/zxa/eureka/EurekaApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumers/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumers/src/main/java/com/zxa/consumers/ConsumersApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumers/src/main/java/com/zxa/consumers/config/EurekaConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumers/src/main/java/com/zxa/consumers/controller/HelloWorld.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumers/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/controlCenter/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producers/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producers/src/main/java/com/zxa/producers/ProducersApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producers/src/main/java/com/zxa/producers/controller/HelloWorld.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producers/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtilFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtilFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlCenter/src/main/java/com/zxa/controller/CertificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controlCenter/src/main/java/com/zxa/controller/CertificationController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/eureka/target/" />
@@ -73,7 +36,7 @@
           <entry key="Java8DateTimeTest" value="1" />
           <entry key="class" value="30" />
           <entry key="html" value="1" />
-          <entry key="java" value="73" />
+          <entry key="java" value="76" />
           <entry key="pom" value="1" />
           <entry key="properties" value="5" />
           <entry key="xml" value="15" />
@@ -84,7 +47,7 @@
         <counts>
           <entry key="CLASS" value="31" />
           <entry key="HTML" value="1" />
-          <entry key="JAVA" value="70" />
+          <entry key="JAVA" value="73" />
           <entry key="Properties" value="5" />
           <entry key="Scratch" value="3" />
           <entry key="XML" value="16" />
@@ -96,9 +59,9 @@
           <entry key="Java8DateTimeTest" value="6" />
           <entry key="dummy" value="5" />
           <entry key="html" value="230" />
-          <entry key="java" value="4272" />
+          <entry key="java" value="4274" />
           <entry key="properties" value="10" />
-          <entry key="txt" value="14" />
+          <entry key="txt" value="16" />
           <entry key="xml" value="68" />
           <entry key="yml" value="334" />
         </counts>
@@ -107,8 +70,8 @@
         <counts>
           <entry key="CLASS" value="6" />
           <entry key="HTML" value="230" />
-          <entry key="JAVA" value="4272" />
-          <entry key="PLAIN_TEXT" value="19" />
+          <entry key="JAVA" value="4274" />
+          <entry key="PLAIN_TEXT" value="21" />
           <entry key="Properties" value="10" />
           <entry key="XML" value="68" />
           <entry key="YAML" value="334" />
@@ -118,11 +81,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controlCenter/src/main/java/com/zxa/controller/CertificationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="550">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -130,11 +93,44 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controlCenter/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+            <state relative-caret-position="183">
+              <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/email/src/main/java/com/zxa/service/MailService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtilFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="17" column="49" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -176,7 +172,6 @@
         <option value="$PROJECT_DIR$/api/src/test/java/com/zxa/test/RandomStringTest.java" />
         <option value="$PROJECT_DIR$/api/src/test/java/com/zxa/util/RandomStringTest.java" />
         <option value="$PROJECT_DIR$/api/src/test/java/com/zxa/entitis/gson.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtilFactory.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtil.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/zxa/config/aa.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/zxa/config/FastJson2JsonRedisSerializer.java" />
@@ -207,7 +202,6 @@
         <option value="$PROJECT_DIR$/api/pom.xml" />
         <option value="$PROJECT_DIR$/email/pom.xml" />
         <option value="$PROJECT_DIR$/controlCenter/pom.xml" />
-        <option value="$PROJECT_DIR$/controlCenter/src/main/java/com/zxa/controller/CertificationController.java" />
         <option value="$PROJECT_DIR$/controlCenter/src/main/java/com/zxa/ControlCenterApplication.java" />
         <option value="$PROJECT_DIR$/api/src/test/java/com/zxa/utils/Java8TimeTest.java" />
         <option value="$PROJECT_DIR$/api/src/test/java/com/zxa/utils/RandomStringTest.java" />
@@ -216,6 +210,8 @@
         <option value="$PROJECT_DIR$/api/src/main/java/com/zxa/service/EmailService.java" />
         <option value="$PROJECT_DIR$/controlCenter/src/main/java/com/zxa/config/RestTemplateConfig.java" />
         <option value="$PROJECT_DIR$/controlCenter/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtilFactory.java" />
+        <option value="$PROJECT_DIR$/controlCenter/src/main/java/com/zxa/controller/CertificationController.java" />
       </list>
     </option>
   </component>
@@ -242,8 +238,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1366" />
-    <option name="height" value="728" />
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="683" />
+    <option name="height" value="364" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -322,6 +320,16 @@
               <item name="SpringCloud" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zxa" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -331,6 +339,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
@@ -373,7 +387,72 @@
               <item name="controlCenter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zxa" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="controlCenter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="email" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="email" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="email" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="email" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="email" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zxa" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="email" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zxa" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="email" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zxa" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
@@ -394,7 +473,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550044949506" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550046330916" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/api/src/main/java/com/zxa/controller" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -523,7 +602,7 @@
       <updated>1549935865171</updated>
       <workItem from="1549935866304" duration="4887000" />
       <workItem from="1549940783217" duration="22390000" />
-      <workItem from="1550018785855" duration="21064000" />
+      <workItem from="1550018785855" duration="22558000" />
     </task>
     <task id="LOCAL-00001" summary="(￣▽￣)~*">
       <created>1549940874087</created>
@@ -581,7 +660,21 @@
       <option name="project" value="LOCAL" />
       <updated>1550043555998</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="11">
+      <created>1550045041202</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1550045041202</updated>
+    </task>
+    <task id="LOCAL-00010" summary="修改了连接延迟">
+      <created>1550045170405</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1550045170405</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -617,7 +710,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48341000" />
+    <option name="totallyTimeSpent" value="49835000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -675,6 +768,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="(￣▽￣)~*" />
     <MESSAGE value="完成初步的整合" />
+    <MESSAGE value="11" />
     <MESSAGE value="修改了连接延迟" />
     <option name="LAST_COMMIT_MESSAGE" value="修改了连接延迟" />
   </component>
@@ -683,13 +777,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.m2/repository/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar!/com/google/gson/stream/JsonWriter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="183" column="28" lean-forward="true" selection-start-line="183" selection-start-column="28" selection-end-line="183" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar!/com/google/gson/Gson.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
@@ -712,18 +799,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/src/main/java/com/zxa/config/FastJsonRedisSerializer.java" />
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#922#923#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.4/jackson-databind-2.9.4.jar!/com/fasterxml/jackson/databind/ObjectMapper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-38759">
@@ -879,16 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/email/src/main/java/com/zxa/service/MailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="47" column="34" lean-forward="true" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1087,20 +1152,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controlCenter/src/main/java/com/zxa/controller/CertificationController.java">
+    <entry file="file://$PROJECT_DIR$/controlCenter/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="183">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/email/src/main/java/com/zxa/service/MailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controlCenter/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        <state relative-caret-position="127">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/zxa/utils/RandomStringUtilFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="17" column="49" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlCenter/src/main/java/com/zxa/controller/CertificationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
