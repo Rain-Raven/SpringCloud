@@ -13,6 +13,8 @@
         <module>producers</module>
         <module>eureka</module>
         <module>consumers</module>
+        <module>email</module>
+        <module>controlCenter</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -44,6 +46,11 @@
             <artifactId>lombok</artifactId>
             <version>1.18.4</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
         </dependency>
 
 

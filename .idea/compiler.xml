@@ -8,6 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api" />
         <module name="consumers" />
+        <module name="controlCenter" />
+        <module name="email" />
         <module name="eureka" />
         <module name="producers" />
       </profile>
