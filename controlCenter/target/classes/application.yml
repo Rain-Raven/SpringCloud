@@ -5,14 +5,18 @@ eureka:
     service-url:
       defaultZone: http://localhost:8901/eureka/
   instance:
-    instance-id: consumers
+    instance-id: controlCenter
     prefer-ip-address: true
 
 info:
-  app.name: mySpringCloud
+  appName: mySpringCloud
   author: zxa
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 spring:
   application:
-    name: consumers
+    name: controlCenter
+
+ribbon:
+  ReadTimeout: 15000
+  ConnectTimeout: 15000
