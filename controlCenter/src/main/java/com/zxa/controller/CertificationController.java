@@ -23,10 +23,10 @@ public class CertificationController {
 
     @ResponseBody
     @RequestMapping(value = "/getEmailCaptcha",method = {RequestMethod.GET,RequestMethod.POST})
-    public String getEmailCaptcha(String userName,Integer type){
+    public boolean getEmailCaptcha(String userName,Integer type){
         String captcha=randomStringUtil.getRandomString(6);
         redisTemplate.opsForValue().set(userName,captcha);
-        emailService.bindingEmail("13609733372@163.com",captcha);
-        return String.valueOf(type);
+        boolean result=emailService.bindingEmail("13609733372@163.com",captcha);
+        return result;
     }
 }

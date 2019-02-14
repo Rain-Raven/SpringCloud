@@ -20,3 +20,6 @@ spring:
 ribbon:
   ReadTimeout: 15000
   ConnectTimeout: 15000
+feign:
+  hystrix:
+    enabled: true                 #开启feign的hystrix功能
