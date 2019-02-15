@@ -20,18 +20,17 @@ public class CertificationController {
     EmailService emailService;
     @Autowired
     RedisTemplate redisTemplate;
+    @Autowired
+    private RandomStringUtil emailCaptchaUtil;
 
     private final Logger log= LoggerFactory.getLogger(this.getClass());
-
-    private RandomStringUtil randomStringUtil=RandomStringUtil.builder().capitalLetters().numbers().create();
-
+    
     @ResponseBody
     @RequestMapping(value = "/getEmailCaptcha",method = {RequestMethod.GET,RequestMethod.POST})
     public boolean getEmailCaptcha(String userName,Integer type){
-        String captcha=randomStringUtil.getRandomString(6);
+        String captcha=emailCaptchaUtil.getRandomString(6);
         redisTemplate.opsForValue().set(userName,captcha);
         boolean result=emailService.bindingEmail("13609733372@163.com",captcha);
-        log.info(emailService.toString());
         return result;
     }
 }
