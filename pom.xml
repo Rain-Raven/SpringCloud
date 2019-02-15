@@ -13,6 +13,7 @@
         <module>eureka</module>
         <module>email</module>
         <module>control-center</module>
+        <module>config-center</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

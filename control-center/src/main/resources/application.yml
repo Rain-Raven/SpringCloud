@@ -11,8 +11,8 @@ eureka:
 info:
   appName: mySpringCloud
   author: zxa
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
+  build.artifactId: @project.artifactId@
+  build.version: @project.version@
 spring:
   application:
     name: control-center
