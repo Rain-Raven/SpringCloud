@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api" />
-        <module name="controlCenter" />
+        <module name="control-center" />
         <module name="email" />
         <module name="eureka" />
       </profile>

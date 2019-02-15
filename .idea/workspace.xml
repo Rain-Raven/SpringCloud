@@ -393,7 +393,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550207808257" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550208838015" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/api/src/main/java/com/zxa/controller" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -434,7 +434,7 @@
   </component>
   <component name="RunManager" selected="Spring Boot.EmailApplication">
     <configuration name="ControlCenterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="controlCenter" />
+      <module name="control-center" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.zxa.*" />
