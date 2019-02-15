@@ -18,8 +18,8 @@ spring:
     name: controlCenter
 
 ribbon:
-  ReadTimeout: 15000
-  ConnectTimeout: 15000
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
 feign:
   hystrix:
     enabled: true                 #开启feign的hystrix功能
