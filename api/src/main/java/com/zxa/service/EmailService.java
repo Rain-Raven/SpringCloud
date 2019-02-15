@@ -1,6 +1,5 @@
 package com.zxa.service;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.zxa.fallback.EmailServiceFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;

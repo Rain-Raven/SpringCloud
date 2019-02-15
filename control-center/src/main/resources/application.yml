@@ -5,7 +5,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:8901/eureka/
   instance:
-    instance-id: controlCenter
+    instance-id: control-center
     prefer-ip-address: true
 
 info:
@@ -15,11 +15,19 @@ info:
   build.version: $project.version$
 spring:
   application:
-    name: controlCenter
+    name: control-center
 
 ribbon:
-  ReadTimeout: 30000
-  ConnectTimeout: 30000
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
 feign:
   hystrix:
     enabled: true                 #开启feign的hystrix功能
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000

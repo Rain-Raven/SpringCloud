@@ -2,6 +2,8 @@ package com.zxa.controller;
 
 import com.zxa.service.EmailService;
 import com.zxa.utils.RandomStringUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
@@ -19,6 +21,8 @@ public class CertificationController {
     @Autowired
     RedisTemplate redisTemplate;
 
+    private final Logger log= LoggerFactory.getLogger(this.getClass());
+
     private RandomStringUtil randomStringUtil=RandomStringUtil.builder().capitalLetters().numbers().create();
 
     @ResponseBody
@@ -27,6 +31,7 @@ public class CertificationController {
         String captcha=randomStringUtil.getRandomString(6);
         redisTemplate.opsForValue().set(userName,captcha);
         boolean result=emailService.bindingEmail("13609733372@163.com",captcha);
+        log.info(emailService.toString());
         return result;
     }
 }
