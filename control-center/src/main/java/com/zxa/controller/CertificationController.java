@@ -24,7 +24,7 @@ public class CertificationController {
     private RandomStringUtil emailCaptchaUtil;
 
     private final Logger log= LoggerFactory.getLogger(this.getClass());
-    
+
     @ResponseBody
     @RequestMapping(value = "/getEmailCaptcha",method = {RequestMethod.GET,RequestMethod.POST})
     public boolean getEmailCaptcha(String userName,Integer type){
