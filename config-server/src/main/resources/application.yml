@@ -6,16 +6,12 @@ spring:
       server:
         git:
           uri: https://github.com/Rain-Raven/spring-cloud-config.git
-          search-paths: /config
           username: Rain-Raven
           password: jpygithub0708
+          default-label: master
 
 server:
   port: 8888
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8901/eureka/
 
 
