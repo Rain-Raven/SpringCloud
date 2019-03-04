@@ -3,7 +3,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8901/eureka/
+      defaultZone: http://120.79.225.94:8901/eureka/
   instance:
     instance-id: control-center
     prefer-ip-address: true

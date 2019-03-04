@@ -1,15 +1,10 @@
 spring:
   application:
-    name: eureka
+    name: email-server
   cloud:
     config:
       uri: http://120.79.225.94:8888/
       profile: dev
       label: master
-eureka:
-  client:
-    service-url:
-      defaultZone:  http://120.79.225.94:8901/eureka/
-
 server:
-  port: 8902
+  port: 8010

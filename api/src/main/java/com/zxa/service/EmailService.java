@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
-@FeignClient(value = "email",fallback = EmailServiceFallback.class)
+@FeignClient(value = "email-server",fallback = EmailServiceFallback.class)
 public interface EmailService {
 
     @RequestMapping(value = "/bindingEmail", method =RequestMethod.POST)
