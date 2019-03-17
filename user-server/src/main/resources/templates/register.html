@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<<html xmlns="http://www.w3.org/1999/xhtml"
+	   xmlns:th="http://www.thymeleaf.org"
+	   xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	   xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>Register</title>
+<!--css-->
+<link href="../css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/form.css" th:href="@{/css/form.css}" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/style.css" th:href="@{/css/style.css}"  rel="stylesheet" type="text/css" media="all" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<!---->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--js-->
+<script src="../js/jquery-1.11.1.js" th:src="@{/js/jquery-1.11.1.js}"></script>
+<script src="../js/jquery.validate.min.js" th:src="@{/js/jquery.validate.min.js}"></script>
+<script src="../js/jquery.easydropdown.js" th:src="@{/js/jquery.easydropdown.js}"></script>
+<!---->
+</head>
+<body>
+<!--header-->
+<div th:replace="../templates/header :: header"></div>
+<!--header end-->
+	<div class="container"> 
+			         
+		<div class="register register-but">
+		  	  <form method="post" th:action="@{/user/userRegister}" id="user-register">
+				 <div class="  register-top-grid">
+					<h3>个人信息</h3>
+					<div class="mation">
+						<span>用户名<label>*</label></span>
+						<input class="form-input" type="text" name="userName">
+						 <span>邮箱地址<label>*</label></span>
+						 <input class="form-input" type="text" name="email" id="email">
+					</div>
+					 <div class="clearfix"> </div>
+					   <a class="news-letter" href="#">
+						 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Sign Up</label>
+					   </a>
+					 </div>
+				     <div class=" register-bottom-grid">
+						    <h3>登陆信息</h3>
+							<div class="mation">
+								<div>
+									<span>验证码<label>*</label></span>
+									<input class="form-input" type="text" name="captcha">
+									<input class="form-captcha" type="button" id="getCaptcha" value="获取验证码">
+								</div>
+								<span>密码<label>*</label></span>
+								<input type="password" name="password">
+								<span>确认密码<label>*</label></span>
+								<input type="password" name="confirmPassword">
+							</div>
+					 </div>
+				<div class="clearfix"> </div>
+				<div class="register-but">
+					   <input type="submit" value="submit">
+					   <div class="clearfix"> </div>
+				</div>
+			</form>
+		   </div>
+		<!--sidebar-->
+		<div th:replace="../templates/sidebar :: sidebar"></div>
+		<!--sidebar end-->
+	</div>
+<!--footer-->
+<div th:replace="../templates/footer :: footer"></div>
+<!--footer end-->
+
+</body>
+<script>
+    $().ready(function() {
+// 在键盘按下并释放及提交后验证提交表单
+        $("#user-register").validate({
+            rules: {
+                userName: {
+                    required: true,
+                    minlength: 4
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                captcha: {
+                    required: true,
+                    minlength: 6,
+					maxlength: 6
+                },
+                password: {
+                    required: true,
+                    minlength: 6
+                },
+                confirmPassword: {
+                    required: true,
+                    minlength: 6,
+					//equalTo: "password"
+                },
+            },
+            messages: {
+                userName: {
+                    required: "请输入用户名",
+                    minlength: "用户名长度不能小于 4 个字符"
+                },
+                password: {
+                    required: "请输入密码",
+                    minlength: "密码长度不能小于 6 个字符"
+                },
+                email: "请输入一个正确的邮箱",
+                confirmPassword: {
+                    required: "请输入密码",
+                    minlength: "密码长度不能小于 6 个字符",
+                    equalTo: "两次输入的密码不一致"
+                },
+                captcha: {
+                    required: "请输入验证码",
+                    minlength: "验证码长度为6位",
+                    maxlength: "验证码长度为6位"
+                },
+            }
+        })
+    });
+
+    $("#getCaptcha").click(function () {
+        $.ajax({
+            type: "post",
+            url: "/user/emailAddressVerification",
+            data: {"email":$("#email").val()},
+            dataType: "json"
+        }).success(function (result) {
+            if (result.code==200){
+                console.log("success");
+            }
+            console.log(result.message);
+        }).fail(function (jqXHR, textStatus, errorThrown) {
+            alert("error")
+            //错误信息
+        });
+    });
+</script>
+</html>

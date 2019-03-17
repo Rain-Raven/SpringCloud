@@ -7,6 +7,7 @@ import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.JsonWriter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -19,6 +20,7 @@ import java.time.format.DateTimeFormatter;
 public class GsonConfig {
 
     @Bean(name = "localGson")
+    @Primary
     public Gson LocalGson(TypeAdapter<LocalDateTime> localDateTimeTypeAdapter, TypeAdapter<LocalDate> localDateTypeAdapter, TypeAdapter<LocalTime> localTimeTypeAdapter) {
         return new GsonBuilder()
                 .registerTypeAdapter(LocalDateTime.class, localDateTimeTypeAdapter)

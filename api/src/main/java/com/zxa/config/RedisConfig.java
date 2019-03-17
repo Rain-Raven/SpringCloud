@@ -26,18 +26,6 @@ import java.time.Duration;
 
 @Configuration
 public class RedisConfig {
-
-    @Value("${redis.maxIdle}")
-    private Integer maxIdle;
-    @Value("${redis.maxTotal}")
-    private Integer maxTotal;
-    @Value("${redis.maxWaitMillis}")
-    private Long maxWaitMillis;
-    @Value("${redis.timeout}")
-    private Integer timeout;
-    @Value("${redis.testOnBorrow}")
-    private boolean testOnBorrow;
-
     @Bean(name = "sessionCacheManager")
     public CacheManager sessionCacheManager(RedisConnectionFactory redisConnectionFactory) {
         // 使用Jackson2JsonRedisSerialize 替换默认序列化
@@ -101,46 +89,6 @@ public class RedisConfig {
         redisTemplate.setKeySerializer(new StringRedisSerializer());
         redisTemplate.afterPropertiesSet();
         return redisTemplate;
-    }
-
-
-    /**
-     * jedis连接工厂
-     *
-     * @return
-     */
-    @Bean
-    public RedisConnectionFactory redisConnectionFactory(JedisPoolConfig jedisPoolConfig) {
-        RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration();
-        //设置redis服务器的host或者ip地址
-        //获得默认的连接池构造
-        //这里需要注意的是，edisConnectionFactoryJ对于Standalone模式的没有（RedisStandaloneConfiguration，JedisPoolConfig）的构造函数，对此
-        //我们用JedisClientConfiguration接口的builder方法实例化一个构造器，还得类型转换
-        JedisClientConfiguration.JedisPoolingClientConfigurationBuilder jpcf = (JedisClientConfiguration.JedisPoolingClientConfigurationBuilder) JedisClientConfiguration.builder().readTimeout(Duration.ofMillis(timeout)).connectTimeout(Duration.ofMillis(timeout));
-        //修改我们的连接池配置
-        //通过构造器来构造jedis客户端配置
-        jpcf.poolConfig(jedisPoolConfig);
-        JedisClientConfiguration jedisClientConfiguration = jpcf.build();
-
-        return new JedisConnectionFactory(redisStandaloneConfiguration, jedisClientConfiguration);
-    }
-
-    /**
-     * 连接池配置信息
-     */
-    @Bean
-    public JedisPoolConfig jedisPoolConfig() {
-        JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
-        //最大连接数
-        jedisPoolConfig.setMaxTotal(maxTotal);
-        //最小空闲连接数
-        jedisPoolConfig.setMinIdle(0);
-        //当池内没有可用连接时，最大等待时间
-        jedisPoolConfig.setMaxWaitMillis(maxWaitMillis);
-        jedisPoolConfig.setMaxWaitMillis(maxIdle);
-        jedisPoolConfig.setTestOnBorrow(testOnBorrow);
-        //其他属性可以自行添加
-        return jedisPoolConfig;
     }
 
 }

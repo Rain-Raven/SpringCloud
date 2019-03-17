@@ -1,11 +1,16 @@
 package com.zxa.entity;
 
+import lombok.Data;
+
+import java.util.Date;
+
 /**
  * user实体类
  * 
  * @author 
  *
  */
+@Data
 public class User {
 	/***/
 	private Integer id; 
@@ -16,9 +21,16 @@ public class User {
 	/***/
 	private String email; 
 	/***/
-	private java.time.Instant updateTime; 
+	private java.util.Date updateTime;
 	/***/
-	private java.time.Instant createTime; 
+	private java.util.Date createTime;
 	/***/
-	private Integer sessionId;
+	private String sessionId;
+
+	public User(){
+		super();
+		Date now=new Date();
+		this.createTime=now;
+		this.updateTime=now;
+	}
 }
