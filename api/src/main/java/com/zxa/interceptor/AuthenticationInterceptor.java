@@ -29,8 +29,8 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
     //不需要登录的接口控制
     private Set<Pattern> freeset = new HashSet<>();
     //session参数名字
-    private final String sessionName = "sessionId";
-    private final String USER_ATTRIBUTE="LoginUser";
+    public static final String sessionName = "sessionId";
+    public static final String USER_ATTRIBUTE="LoginUser";
     @Autowired
     private Gson standardGson=new Gson();
 

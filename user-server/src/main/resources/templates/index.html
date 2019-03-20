@@ -291,8 +291,25 @@
 </body>
 <script>
     $().ready(function () {
-        console.log($.cookie('userName'));
-        console.log($.cookie('password'));
+        init();
     });
+
+
+    function init() {
+        var userName=$.cookie('userName');
+        if (userName==null){
+            $("#personInfo").hide();
+            $("#shoppingCartUrl").hide();
+            $("#exitUrl").hide();
+            $("#loginUrl").show();
+        }
+        else {
+            $("#personInfo").show();
+            $("#userName").text(userName);
+            $("#shoppingCartUrl").show();
+            $("#exitUrl").show();
+            $("#loginUrl").hide();
+        }
+    }
 </script>
 </html>

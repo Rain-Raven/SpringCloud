@@ -63,6 +63,7 @@
 </body>
 <script>
     $().ready(function() {
+        init();
 // 在键盘按下并释放及提交后验证提交表单
         $("#user-login").validate({
             rules: {
@@ -125,5 +126,23 @@ $("#user-login").submit(function (event) {
         });
     };
 });
+
+
+    function init() {
+        var userName=$.cookie('userName');
+        if (userName==null){
+            $("#personInfo").hide();
+            $("#shoppingCartUrl").hide();
+            $("#exitUrl").hide();
+            $("#loginUrl").show();
+        }
+        else {
+            $("#personInfo").show();
+            $("#userName").text(userName);
+            $("#shoppingCartUrl").show();
+            $("#exitUrl").show();
+            $("#loginUrl").hide();
+        }
+    }
 </script>
 </html>

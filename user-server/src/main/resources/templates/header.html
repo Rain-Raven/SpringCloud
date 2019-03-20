@@ -28,7 +28,7 @@
                 <div class="down-top">
 
                     <select tabindex="4" class="dropdown">
-                        <option value="" class="label">English</option>
+                        <option value="" class="label">中文</option>
                         <option value="1">Japanese</option>
                         <option value="2">French</option>
                         <option value="3">German</option>
@@ -37,7 +37,7 @@
                 <div class="down-top top-down">
 
                     <select tabindex="4" class="dropdown ">
-                        <option value="" class="label">Currency :USD</option>
+                        <option value="" class="label">人民币 :￥</option>
                         <option value="1">Dollar</option>
                         <option value="2">Euro</option>
                     </select>
@@ -64,9 +64,10 @@
             </div>
             <div class="header-bottom-right">
                 <ul class="men-grid">
-                    <li><a href="/index/login.html"><span> </span>个人信息</a></li>
-                    <li class="login"><a href="/index/login" th:href="@{/index/login}"><span></span>登陆</a></li>
-                    <li class="cart"><a href="#"><span> </span>购物车</a></li>
+                    <li id="personInfo" ><a href="/index/login.html"><span ></span><div id="userName" style="display: inline-block"></div></a></li>
+                    <li class="login" id="exitUrl"><a href="/user/userLoggedOut" th:href="@{/user/userLoggedOut}" ><span></span>退出</a></li>
+                    <li class="login" id="loginUrl"><a href="/index/login" th:href="@{/index/login}" ><span></span>登陆</a></li>
+                    <li class="cart" id="shoppingCartUrl"><a href="#" ><span> </span>购物车</a></li>
                 </ul>
             </div>
             <div class="clearfix"> </div>
