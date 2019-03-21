@@ -1,20 +1,26 @@
 package com.zxa.controller;
 
+import com.github.tobato.fastdfs.domain.StorePath;
+import com.github.tobato.fastdfs.service.FastFileStorageClient;
+import com.zxa.common.ApplicationConstant;
 import com.zxa.common.ReturnEntity;
 import com.zxa.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
 
 @RequestMapping("/index")
 @Controller
 public class IndexController {
     @Autowired
     CategoryService categoryService;
+    @Autowired
+    FastFileStorageClient fastFileStorageClient;
     @GetMapping(value = {"","/index"})
     public String index(Model model){
         model.addAttribute("category",categoryService.getCategory());
@@ -55,6 +61,18 @@ public class IndexController {
     @GetMapping("listCategory")
     public ReturnEntity listCategory(){
         return ReturnEntity.success(categoryService.getCategory());
+    }
+
+    @ResponseBody
+    @PostMapping("uploadPic")
+    public ReturnEntity uploadPic(MultipartFile file) throws IOException {
+        if(file==null){
+            return ReturnEntity.error(ApplicationConstant.PARAMETER_ERROR);
+        }
+        StorePath storePath=fastFileStorageClient.uploadFile(file.getInputStream(),file.getSize(),file.getOriginalFilename(),null);
+        String url=storePath.getFullPath();
+        return ReturnEntity.success(url);
+
     }
 
 }
