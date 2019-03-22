@@ -7,24 +7,333 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66f40457-e1dd-4269-8faa-bdeee26a0f71" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/backgroud/config/MyWebAppConfigurer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/META-INF/spring-devtools.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/css/error-page.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/images/bg_login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/images/bg_login2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/images/head.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/images/ic_403.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/images/ic_404.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/images/ic_500.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/images/img_msg_db.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/images/img_msg_notice.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/images/img_msg_pri.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/images/message.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/images/welcome.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/js/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/css/layui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/css/layui.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/css/modules/code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/css/modules/layer/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/css/modules/layer/default/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/10.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/11.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/12.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/13.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/14.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/15.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/16.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/17.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/18.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/19.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/20.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/21.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/22.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/23.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/24.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/25.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/26.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/27.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/28.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/29.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/30.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/31.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/33.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/34.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/35.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/36.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/37.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/38.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/39.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/40.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/41.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/42.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/43.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/44.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/45.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/46.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/47.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/48.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/49.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/50.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/51.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/52.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/53.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/54.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/55.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/56.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/57.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/58.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/59.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/60.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/61.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/62.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/63.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/64.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/65.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/66.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/67.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/68.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/69.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/7.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/70.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/71.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/8.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/images/face/9.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/colorpicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/element.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/flow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/laydate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/layedit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/laypage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/laytpl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/rate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/lay/modules/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/layui.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/layui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/ax/ax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/city-picker/city-picker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/city-picker/city-picker.data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/city-picker/city-picker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/city-picker/drop-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/contextMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/dropdown/dropdown.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/dropdown/dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/dtree/dtree.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/dtree/dtree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/dtree/font/dtreefont.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/dtree/font/dtreefont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/dtree/font/dtreefont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/dtree/font/dtreefont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/dtree/font/dtreefont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/dtree/font/icons.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/formSelects/formSelects-v4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/formSelects/formSelects-v4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/formSelects/formSelects-v4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/img/ic_loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/img/icon_date.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/notice/notice.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/notice/notice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/step-lay/step.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/step-lay/step.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/tableSelect/tableSelect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/img/img_theme_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/img/img_theme_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/img/img_theme_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/img/img_theme_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/img/img_theme_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/img/img_theme_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/img/img_theme_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/img/img_theme_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/img/img_theme_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/img/img_theme_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/img/img_theme_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/img/img_theme_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/theme-black.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/theme-blue-side.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/theme-blue-white.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/theme-blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/theme-cyan.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/theme-green-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/theme-green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/theme-red-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/theme-red-white.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/theme-red.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/theme/theme-white.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/treetable-lay/treetable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/treetable-lay/treetable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/module/ztree/ztree-object.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/plugins/jquery/clipboard.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/plugins/jquery/jquery-3.2.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/plugins/ztree/img/group.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/plugins/ztree/img/line_conn.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/plugins/ztree/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/plugins/ztree/img/single.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/plugins/ztree/img/zTreeStandard.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/plugins/ztree/img/zTreeStandard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/plugins/ztree/jquery.ztree.all.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/plugins/ztree/zTreeStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/frame/message.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/frame/message.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/frame/password.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/frame/user_info.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/frame/user_info.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/dept/dept.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/dept/dept_add.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/dept/dept_edit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/dict/dict.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/dict/dict_add_item.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/dict/dict_add_type.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/log/log.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/log/login_log.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/menu/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/menu/menu_add.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/menu/menu_edit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/notice/notice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/notice/notice_add.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/notice/notice_edit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/role/role.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/role/role_add.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/role/role_edit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/user/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/user/user_add.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/user/user_chpwd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/modular/system/user/user_edit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/ehcache.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/common/_body.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/common/_container.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/common/_footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/common/_header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/common/_sidebar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/common/loading.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/common/tree_dlg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/frame/message.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/frame/password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/frame/theme.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/frame/user_chpwd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/frame/user_info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/frame/welcome.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/dept/dept.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/dept/dept_add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/dept/dept_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/dict/dict.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/dict/dict_add_item.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/dict/dict_add_type.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/log/log.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/log/login_log.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/menu/menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/menu/menu_add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/menu/menu_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/notice/notice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/notice/notice_add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/notice/notice_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/notice/notice_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/role/role.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/role/role_add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/role/role_assign.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/role/role_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/user/user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/user/user_add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/user/user_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/modular/system/user/user_roleassign.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backgroundserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backgroundserver/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/control-center/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/control-center/src/main/java/com/zxa/ControlCenterApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/control-center/src/main/java/com/zxa/config/RandomStringUtilConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/control-center/src/main/java/com/zxa/config/RestTemplateConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/control-center/src/main/java/com/zxa/controller/CertificationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/control-center/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/control-center/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka8092/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka8092/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-server/src/main/java/com/zxa/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-server/src/main/java/com/zxa/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-server/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-server/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/BackgroudServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/H-ui前端框架官方网站.URL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/_blank.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/_footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/_header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/_menu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/_meta.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/admin-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/admin-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/admin-password-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/admin-permission.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/admin-role-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/admin-role.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/article-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/article-class-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/article-class.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/article-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/change-password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/charts-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/charts-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/charts-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/charts-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/charts-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/charts-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/charts-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/codeing.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/feedback-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/logo.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/member-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/member-del.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/member-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/member-record-browse.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/member-record-download.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/member-record-share.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/member-show.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/picture-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/picture-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/picture-show.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/product-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/product-brand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/product-category-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/product-category.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/product-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/record-browse.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/record-download.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/record-share.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/system-base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/system-category-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/system-category.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/system-data.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/system-log.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/system-shielding.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/user-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/user-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/user-password-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/user-show.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/welcome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backgroundserver/src/main/resources/templates/【开发必读】文档目录.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/eureka/target/" />
@@ -129,11 +438,12 @@
     <session id="1453184517">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
+          <entry key="project.closed" value="20" />
           <entry key="project.open.time.120" value="1" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.56" value="1" />
@@ -149,63 +459,70 @@
           <entry key="project.open.time.85" value="1" />
           <entry key="project.open.time.91" value="1" />
           <entry key="project.open.time.98" value="1" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="39" />
-          <entry key="css" value="19" />
-          <entry key="html" value="29" />
-          <entry key="java" value="148" />
-          <entry key="js" value="11" />
-          <entry key="png" value="4" />
+          <entry key="class" value="41" />
+          <entry key="css" value="24" />
+          <entry key="gif" value="3" />
+          <entry key="html" value="31" />
+          <entry key="java" value="164" />
+          <entry key="js" value="13" />
+          <entry key="png" value="6" />
           <entry key="pom" value="1" />
-          <entry key="properties" value="6" />
+          <entry key="properties" value="7" />
           <entry key="provides" value="1" />
           <entry key="rnc" value="1" />
-          <entry key="xml" value="58" />
+          <entry key="svg" value="3" />
+          <entry key="ttf" value="2" />
+          <entry key="txt" value="1" />
+          <entry key="xml" value="60" />
           <entry key="xsd" value="1" />
-          <entry key="yml" value="43" />
+          <entry key="yml" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="39" />
-          <entry key="CSS" value="19" />
-          <entry key="HTML" value="29" />
-          <entry key="Image" value="4" />
-          <entry key="JAVA" value="148" />
-          <entry key="JavaScript" value="11" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Properties" value="6" />
+          <entry key="CLASS" value="41" />
+          <entry key="CSS" value="24" />
+          <entry key="Font" value="2" />
+          <entry key="HTML" value="31" />
+          <entry key="Image" value="9" />
+          <entry key="JAVA" value="164" />
+          <entry key="JavaScript" value="13" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Properties" value="7" />
           <entry key="RNG Compact" value="1" />
-          <entry key="XML" value="60" />
-          <entry key="YAML" value="43" />
+          <entry key="SVG" value="3" />
+          <entry key="XML" value="62" />
+          <entry key="YAML" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="45" />
-          <entry key="html" value="2283" />
-          <entry key="java" value="6281" />
+          <entry key="dummy" value="14" />
+          <entry key="html" value="2324" />
+          <entry key="java" value="6291" />
           <entry key="js" value="4" />
           <entry key="properties" value="58" />
-          <entry key="txt" value="49" />
-          <entry key="xml" value="437" />
-          <entry key="yml" value="745" />
+          <entry key="txt" value="62" />
+          <entry key="xml" value="481" />
+          <entry key="yml" value="770" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="45" />
-          <entry key="HTML" value="2283" />
-          <entry key="JAVA" value="6281" />
+          <entry key="HTML" value="2324" />
+          <entry key="JAVA" value="6291" />
           <entry key="JavaScript" value="4" />
-          <entry key="PLAIN_TEXT" value="49" />
+          <entry key="PLAIN_TEXT" value="76" />
           <entry key="Properties" value="58" />
-          <entry key="XML" value="437" />
-          <entry key="YAML" value="745" />
+          <entry key="XML" value="481" />
+          <entry key="YAML" value="770" />
         </counts>
       </usages-collector>
     </session>
@@ -213,94 +530,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/eureka8092/src/main/java/com/zxa/eureka/EurekaApplication.java">
+        <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/pages/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/eureka8092/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user-server/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/eureka/src/main/java/com/zxa/eureka/EurekaApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config-server/src/main/java/com/zxa/ConfigServerApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+            <state relative-caret-position="288">
+              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backgroundserver/pom.xml">
+        <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/backgroud/modular/system/controller/DeptController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1102">
-              <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config-server/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/eureka/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1102">
-              <caret line="58" column="54" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
+            <state relative-caret-position="136">
+              <caret line="52" column="3" lean-forward="true" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -319,9 +561,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>em</find>
-      <find>domin</find>
-      <find>seart</find>
       <find>search</find>
       <find>arrow-img</find>
       <find>value=&quot;&quot;</find>
@@ -349,6 +588,9 @@
       <find>redis</find>
       <find>cloud</find>
       <find>uploadFile</find>
+      <find>iconfont.eot</find>
+      <find>iconfont</find>
+      <find>filtering</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -357,14 +599,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/zxa/pojo/LoginPojo.java" />
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/zxa/entity/User.java" />
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/zxa/service/UserService.java" />
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/zxa/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/zxa/interceptor/xx.java" />
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/zxa/common/ApplicationConstant.java" />
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/zxa/interceptor/AuthenticationInterceptor.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/com/zxa/ApiApplication.java" />
         <option value="$PROJECT_DIR$/control-center/pom.xml" />
         <option value="$PROJECT_DIR$/user-server/src/main/resources/tempplates/index.html" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/zxa/config/ObjectMapperConfig.java" />
@@ -407,6 +641,14 @@
         <option value="$PROJECT_DIR$/user-server/pom.xml" />
         <option value="$PROJECT_DIR$/eureka/pom.xml" />
         <option value="$PROJECT_DIR$/config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/backgroud/core/common/constant/factory/ConstantFactory.java" />
+        <option value="$PROJECT_DIR$/backgroundserver/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/backgroud/config/datasource/MultiDataSourceConfig.java" />
+        <option value="$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/backgroud/config/datasource/SingleDataSourceConfig.java" />
+        <option value="$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/backgroud/config/asd.java" />
+        <option value="$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/backgroud/config/MyWebAppConfigurer.java" />
+        <option value="$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/font/layui.css" />
+        <option value="$PROJECT_DIR$/backgroundserver/src/main/resources/pages/index.html" />
         <option value="$PROJECT_DIR$/backgroundserver/pom.xml" />
       </list>
     </option>
@@ -520,17 +762,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="SpringCloud" type="58d84e3e:PackageViewProjectNode" />
-              <item name="eureka" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -565,11 +796,87 @@
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zxa" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zxa" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="backgroundserver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backgroundserver" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backgroundserver" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backgroundserver" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backgroundserver" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backgroundserver" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zxa" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backgroundserver" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
@@ -590,7 +897,74 @@
             </path>
             <path>
               <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zxa" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="zxa" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringCloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SpringCloud" type="58d84e3e:PackageViewProjectNode" />
+              <item name="eureka" type="616d4139:PackageViewModuleNode" />
             </path>
           </expand>
           <select />
@@ -607,7 +981,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553225177654" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553234257047" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/SpringCloudLearning-master/chapter1" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -618,25 +992,25 @@
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/eureka8092/src/main/java/eureka" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Projects\SpringCloud\user-server\src\main\resources\static" />
-      <recent name="E:\Projects\SpringCloud\user-server\src\main\resources" />
-      <recent name="D:\myProject\SpringCloud\api\src\main\test\com.zxa" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.zxa.entitis" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\SpringCloud\backgroundserver\src\main\resources\assets\common\layui\font" />
+      <recent name="E:\Projects\SpringCloud\backgroundserver" />
+      <recent name="E:\Projects\SpringCloud\backgroundserver\src\main\resources" />
+      <recent name="E:\Projects\SpringCloud\backgroundserver\src\main" />
+      <recent name="E:\Projects\SpringCloud\user-server\src\main\resources\static\js" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.zxa.interceptor" />
       <recent name="com.zxa.eureka" />
       <recent name="eureka" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Projects\SpringCloud\user-server\src\main\resources\static\js" />
-      <recent name="E:\Projects\SpringCloud\api\src\main\java\com\zxa" />
-      <recent name="E:\Projects\SpringCloud\user-server\src\main\resources\template" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\SpringCloud\user-server\src\main\resources\static" />
       <recent name="E:\Projects\SpringCloud\user-server\src\main\resources" />
-      <recent name="E:\Projects\SpringCloud\eureka8092\src\main\resources" />
+      <recent name="D:\myProject\SpringCloud\api\src\main\test\com.zxa" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -657,10 +1031,17 @@
     </option>
     <option name="contentProportion" value="0.17697063" />
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServerApplication">
+  <component name="RunManager" selected="Spring Boot.BackGroupApplication">
     <configuration name="la" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="la" />
       <module name="user-server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackGroupApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="backgroundserver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zxa.backgroud.BackGroupApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -725,6 +1106,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GunsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="backgroundserver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.stylefeng.guns.GunsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="user-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.zxa.UserServerApplication" />
@@ -734,12 +1122,14 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.UserServerApplication" />
+      <item itemvalue="Spring Boot.BackgroudServerApplication" />
       <item itemvalue="Spring Boot.EurekaApplication" />
       <item itemvalue="Spring Boot.EmailApplication" />
       <item itemvalue="Spring Boot.ControlCenterApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Application.la" />
-      <item itemvalue="Spring Boot.BackgroudServerApplication" />
+      <item itemvalue="Spring Boot.GunsApplication" />
+      <item itemvalue="Spring Boot.BackGroupApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -786,7 +1176,9 @@
       <workItem from="1553078305436" duration="3419000" />
       <workItem from="1553084159723" duration="2489000" />
       <workItem from="1553170321247" duration="5001000" />
-      <workItem from="1553220420437" duration="2562000" />
+      <workItem from="1553220420437" duration="4040000" />
+      <workItem from="1553228635761" duration="127000" />
+      <workItem from="1553228823188" duration="5461000" />
     </task>
     <task id="LOCAL-00001" summary="(￣▽￣)~*">
       <created>1549940874087</created>
@@ -956,7 +1348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553172236784</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="删除了无用文件">
+      <created>1553225299917</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1553225299918</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -992,7 +1391,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205271000" />
+    <option name="totallyTimeSpent" value="212337000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1007,7 +1406,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19591528" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.38124055" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1094,7 +1493,8 @@
     <MESSAGE value="添加的众多功能" />
     <MESSAGE value="更新了SpringCloud的版本" />
     <MESSAGE value="更新了fastdfs服务器" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新了fastdfs服务器" />
+    <MESSAGE value="删除了无用文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除了无用文件" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1108,264 +1508,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/csource/fastdfs-client-java/1.27-SNAPSHOT/fastdfs-client-java-1.27-SNAPSHOT.jar!/META-INF/maven/org.csource/fastdfs-client-java/pom.xml" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/csource/fastdfs-client-java/1.27-SNAPSHOT/fastdfs-client-java-1.27-SNAPSHOT.jar!/META-INF/maven/org.csource/fastdfs-client-java/pom.properties" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/maven/lib/maven.jar!/schemas/settings-1.0.0.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="103" column="12" selection-start-line="103" selection-start-column="12" selection-end-line="103" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-server/src/main/resources/templates/product.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3762">
-          <caret line="198" column="9" selection-start-line="198" selection-start-column="9" selection-end-line="198" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/maven/apache-maven-3.5.4/conf/settings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="197" column="64" selection-start-line="197" selection-start-column="64" selection-end-line="197" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/zxa/interceptor/AuthenticationInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/email/src/main/java/com/zxa/service/TemplateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.4.RELEASE/spring-core-5.0.4.RELEASE.jar!/org/springframework/util/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-actuator/2.0.0.RELEASE/spring-boot-actuator-2.0.0.RELEASE.jar!/org/springframework/boot/actuate/endpoint/annotation/EndpointDiscoverer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="120" selection-start-line="120" selection-end-line="120" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.0.4.RELEASE/spring-beans-5.0.4.RELEASE.jar!/org/springframework/beans/factory/support/SimpleInstantiationStrategy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/zxa/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-actuator/2.0.0.RELEASE/spring-boot-actuator-2.0.0.RELEASE.jar!/org/springframework/boot/actuate/env/EnvironmentEndpoint.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-actuator-autoconfigure/2.0.0.RELEASE/spring-boot-actuator-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/actuate/autoconfigure/endpoint/web/ServletEndpointManagementContextConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-actuator-autoconfigure/2.0.0.RELEASE/spring-boot-actuator-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/actuate/autoconfigure/endpoint/EndpointAutoConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/2.0.0/mybatis-spring-2.0.0.jar!/META-INF/maven/org.mybatis/mybatis-spring/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-950">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.0.6.RELEASE/spring-boot-autoconfigure-2.0.6.RELEASE.jar!/org/springframework/boot/autoconfigure/SpringBootApplication.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.0.6.RELEASE/spring-boot-autoconfigure-2.0.6.RELEASE.jar!/org/springframework/boot/autoconfigure/EnableAutoConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.0/mybatis-3.5.0.jar!/org/apache/ibatis/session/SqlSessionFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.0/mybatis-3.5.0.jar!/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.0/mybatis-3.5.0.jar!/org/apache/ibatis/session/Configuration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="193" column="78" selection-start-line="193" selection-start-column="78" selection-end-line="193" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.0.4.RELEASE/spring-beans-5.0.4.RELEASE.jar!/org/springframework/beans/AbstractPropertyAccessor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/zxa/dao/CategoryDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.2.RELEASE/spring-boot-2.1.2.RELEASE.jar!/org/springframework/boot/web/servlet/FilterRegistrationBean.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.0.0.RELEASE/spring-boot-starter-web-2.0.0.RELEASE.jar!/META-INF/spring.provides">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/zxa/dao/CommonDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.m2/repository/org/springframework/cloud/spring-cloud-starter-openfeign/1.4.6.RELEASE/spring-cloud-starter-openfeign-1.4.6.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/email/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="48" column="44" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/zxa/config/CommonConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE.jar!/org/springframework/web/multipart/MultipartFile.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/BackgroudServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/email/src/main/java/com/zxa/EmailApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/zxa/service/EmailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="42" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/zxa/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/zxa/UserServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/com/github/tobato/fastdfs-client/1.26.2/fastdfs-client-1.26.2.jar!/com/github/tobato/fastdfs/service/DefaultFastFileStorageClient.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="40" column="90" selection-start-line="40" selection-start-column="79" selection-end-line="40" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-server/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/com/github/tobato/fastdfs-client/1.26.2/fastdfs-client-1.26.2.jar!/com/github/tobato/fastdfs/service/FastFileStorageClient.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -1380,6 +1522,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/control-center/src/main/java/com/zxa/config/RandomStringUtilConfig.java" />
     <entry file="file://$PROJECT_DIR$/eureka8092/src/main/java/com/zxa/eureka/EurekaApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -1389,60 +1532,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/eureka8092/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state>
           <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1102">
-          <caret line="58" column="54" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
+        <state relative-caret-position="551">
           <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/lib/jquery/1.9.1/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/templates/record-browse.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1528" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/templates/【开发必读】文档目录.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user-server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
+        <state relative-caret-position="190">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eureka/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/control-center/src/main/java/com/zxa/config/RandomStringUtilConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/eureka/src/main/java/com/zxa/eureka/EurekaApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
+        <state relative-caret-position="171">
           <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -1453,10 +1585,261 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1102">
+          <caret line="58" column="54" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/BackgroudServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/backgroud/core/aop/LogAop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/META-INF/spring-devtools.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/backgroud/GunsServletInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/com/baomidou/mybatis-plus-boot-starter/3.0.7.1/mybatis-plus-boot-starter-3.0.7.1.jar!/com/baomidou/mybatisplus/autoconfigure/MybatisPlusProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="81" column="16" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
+          <folding>
+            <element signature="e#2713#2714#0" expanded="true" />
+            <element signature="e#2773#2774#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.1.1.RELEASE/spring-boot-autoconfigure-2.1.1.RELEASE.jar!/org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="75" column="32" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/application-local.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/backgroud/BackGroupApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/backgroud/modular/system/mapper/RoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/backgroud/core/common/constant/factory/ConstantFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/zxa/config/RandomStringUtilConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/zxa/config/ExecutorConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/zxa/config/CommonConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="35" column="48" lean-forward="true" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/zxa/config/MyWebAppConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="22" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/backgroud/config/datasource/SingleDataSourceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/backgroud/config/MyWebAppConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/font/iconfont.ttf">
+      <provider selected="true" editor-type-id="fontseditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/css/modules/layer/default/loading-1.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/css/modules/layer/default/loading-2.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/font/layui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="69466" selection-start-line="1" selection-start-column="69466" selection-end-line="1" selection-end-column="69466" />
+          <folding>
+            <element signature="e#61524#61663#2" expanded="true" />
+            <element signature="e#63117#63256#2" expanded="true" />
+            <element signature="e#63804#63943#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/css/layui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="2217" selection-start-line="1" selection-start-column="2209" selection-end-line="1" selection-end-column="2217" />
+          <folding>
+            <element signature="e#61524#61663#2" expanded="true" />
+            <element signature="e#63117#63256#2" expanded="true" />
+            <element signature="e#63804#63943#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/css/layui.mobile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="1604" selection-start-line="1" selection-start-column="1596" selection-end-line="1" selection-end-column="1604" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/font/iconfont.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/css/modules/layer/default/loading-0.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/css/modules/layer/default/layer.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/css/modules/layer/default/icon-ext.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/assets/common/layui/css/modules/layer/default/icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/backgroud/config/web/String2DateConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/backgroud/config/datasource/MultiDataSourceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="51" column="7" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/resources/pages/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backgroundserver/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1102">
-          <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+        <state relative-caret-position="5">
+          <caret line="230" column="23" selection-start-line="230" selection-start-column="23" selection-end-line="230" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backgroundserver/src/main/java/com/zxa/backgroud/modular/system/controller/DeptController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="52" column="3" lean-forward="true" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
         </state>
       </provider>
     </entry>
