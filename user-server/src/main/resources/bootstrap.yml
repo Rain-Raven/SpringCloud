@@ -26,3 +26,7 @@ fdfs:
   pool:
     jmx-enabled: false
 
+default:
+  image:
+    path: 120.79.225.94:8080
+

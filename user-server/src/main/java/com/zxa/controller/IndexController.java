@@ -21,6 +21,9 @@ public class IndexController {
     CategoryService categoryService;
     @Autowired
     FastFileStorageClient fastFileStorageClient;
+    @Value("${default.image.path}")
+    private String imagePath;
+
     @GetMapping(value = {"","/index"})
     public String index(Model model){
         model.addAttribute("category",categoryService.getCategory());
@@ -66,11 +69,11 @@ public class IndexController {
     @ResponseBody
     @PostMapping("uploadPic")
     public ReturnEntity uploadPic(MultipartFile file) throws IOException {
-        if(file==null){
+        if(file.isEmpty()){
             return ReturnEntity.error(ApplicationConstant.PARAMETER_ERROR);
         }
-        StorePath storePath=fastFileStorageClient.uploadFile(file.getInputStream(),file.getSize(),file.getOriginalFilename(),null);
-        String url=storePath.getFullPath();
+        StorePath storePath=fastFileStorageClient.uploadFile(file.getInputStream(),file.getSize(),"png",null);
+        String url=imagePath+"/"+storePath.getFullPath();
         return ReturnEntity.success(url);
 
     }
