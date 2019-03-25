@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -47,6 +48,13 @@ public class SecondCategoryController extends BaseController {
     @RequestMapping("")
     public String index() {
         return PREFIX + "category.html";
+    }
+
+
+    @RequestMapping(value = "/getAll")
+    @ResponseBody
+    public List<SecondCategory> getAll() {
+        return secondCategoryService.getAll();
     }
 
     /**
@@ -90,7 +98,6 @@ public class SecondCategoryController extends BaseController {
     @RequestMapping(value = "/add")
     @ResponseBody
     public ResponseData add(SecondCategory category) {
-        category.setId((long) new Random().nextInt(Integer.MAX_VALUE));
         this.secondCategoryService.addCategory(category);
         return SUCCESS_TIP;
     }
@@ -110,20 +117,11 @@ public class SecondCategoryController extends BaseController {
         return LayuiPageFactory.createPageInfo(wrap);
     }
 
-    /**
-     * 部门详情
-     *
-     * @author fengshuonan
-     * @Date 2018/12/23 4:57 PM
-     */
     @RequestMapping(value = "/detail/{id}")
     @ResponseBody
     public Object detail(@PathVariable("id") Long id) {
         SecondCategory category = secondCategoryService.getById(id);
-        DeptDto deptDto = new DeptDto();
-        BeanUtil.copyProperties(category, deptDto);
-        deptDto.setPName(ConstantFactory.me().getDeptName(deptDto.getPid()));
-        return deptDto;
+        return category;
     }
 
     /**

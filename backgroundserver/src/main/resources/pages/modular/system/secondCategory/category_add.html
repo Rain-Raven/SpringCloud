@@ -15,9 +15,16 @@
     <div class="layui-form-item">
         <label class="layui-form-label">状态</label>
         <div class="layui-input-block">
-            <select name="status">
+            <select name="status" class="layui-input" lay-verify="required">
                 <option value="1">启用</option>
                 <option value="0">禁用</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">一级分类ID</label>
+        <div class="layui-input-block">
+            <select id="category_id" name="categoryId" lay-verify="required">
             </select>
         </div>
     </div>
@@ -27,3 +34,10 @@
     </div>
 </form>
 @}
+
+<script src="/assets/common/plugins/jquery/jquery-3.2.1.min.js">
+    $(function () {
+        console.log("啦啦啦");
+        jQuery("#category_id").append("<option value='1'>Text</option>");
+    });
+</script>

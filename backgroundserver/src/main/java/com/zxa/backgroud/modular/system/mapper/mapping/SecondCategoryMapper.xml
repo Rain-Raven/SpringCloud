@@ -15,7 +15,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id,category_id,name,status,sort,create_time,update_time
+        id,category_id AS categoryId,name,status,sort,create_time,update_time
     </sql>
 
 
@@ -26,6 +26,12 @@
         <where> 1 = 1
         </where>
         order by sort DESC
+    </select>
+
+    <select id="getAll" resultType="com.zxa.backgroud.modular.system.entity.Category">
+        select
+        <include refid="Base_Column_List"/>
+        from t_secondary_category
     </select>
 
 </mapper>

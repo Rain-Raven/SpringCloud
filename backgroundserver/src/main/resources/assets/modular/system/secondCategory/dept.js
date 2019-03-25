@@ -22,6 +22,7 @@ layui.use(['table', 'admin', 'ax', 'ztree'], function () {
         return [[
             {type: 'checkbox'},
             {field: 'id', sort: true, title: 'id'},
+            {field: 'categoryId', sort: true, title: '一级分类ID'},
             {field: 'name', sort: true, title: '类别名称'},
             {field: 'status', sort: true, title: '状态'},
             {field: 'sort', sort: true, title: '排序'},
@@ -55,7 +56,7 @@ layui.use(['table', 'admin', 'ax', 'ztree'], function () {
         top.layui.admin.open({
             type: 2,
             title: '添加类别',
-            content: Feng.ctxPath + '/category/category_add',
+            content: Feng.ctxPath + '/secondCategory/category_add',
             end: function () {
                 admin.getTempData('formOk') && table.reload(Dept.tableId);
             }
@@ -84,7 +85,7 @@ layui.use(['table', 'admin', 'ax', 'ztree'], function () {
         top.layui.admin.open({
             type: 2,
             title: '修改类别',
-            content: Feng.ctxPath + '/category/category_update?id=' + data.id,
+            content: Feng.ctxPath + '/secondCategory/category_update?id=' + data.id,
             end: function () {
                 admin.getTempData('formOk') && table.reload(Dept.tableId);
             }
@@ -98,7 +99,7 @@ layui.use(['table', 'admin', 'ax', 'ztree'], function () {
      */
     Dept.onDeleteDept = function (data) {
         var operation = function () {
-            var ajax = new $ax(Feng.ctxPath + "/category/delete", function () {
+            var ajax = new $ax(Feng.ctxPath + "/secondCategory/delete", function () {
                 Feng.success("删除成功!");
                 table.reload(Dept.tableId);
             }, function (data) {
@@ -107,13 +108,13 @@ layui.use(['table', 'admin', 'ax', 'ztree'], function () {
             ajax.set("id", data.id);
             ajax.start();
         };
-        Feng.confirm("是否删除部门 " + data.simpleName + "?", operation);
+        Feng.confirm("是否删除类别 " + data.name + "?", operation);
     };
 
     // 渲染表格
     var tableResult = table.render({
         elem: '#' + Dept.tableId,
-        url: Feng.ctxPath + '/category/list',
+        url: Feng.ctxPath + '/secondCategory/list',
         page: true,
         height: "full-158",
         cellMinWidth: 100,

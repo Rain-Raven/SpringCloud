@@ -8,22 +8,21 @@ var DeptInfoDlg = {
     }
 };
 
-layui.use(['layer', 'form', 'admin', 'ax'], function () {
+layui.use(['layer', 'form', 'admin', 'ax','upload'], function () {
     var $ = layui.jquery;
     var $ax = layui.ax;
     var form = layui.form;
     var admin = layui.admin;
     var layer = layui.layer;
+    var upload = layui.upload;
 
     // 让当前iframe弹层高度适应
     admin.iframeAuto();
 
-
-
     // 表单提交事件
     form.on('submit(btnSubmit)', function (data) {
-        var ajax = new $ax(Feng.ctxPath + "/secondCategory/update", function (data) {
-            Feng.success("修改成功！");
+        var ajax = new $ax(Feng.ctxPath + "/goods/add", function (data) {
+            Feng.success("添加成功！");
 
             //传给上个页面，刷新table用
             admin.putTempData('formOk', true);
@@ -31,7 +30,7 @@ layui.use(['layer', 'form', 'admin', 'ax'], function () {
             //关掉对话框
             admin.closeThisDialog();
         }, function (data) {
-            Feng.error("修改失败！" + data.responseJSON.message)
+            Feng.error("添加失败！" + data.responseJSON.message)
         });
         ajax.set(data.field);
         ajax.start();
@@ -40,7 +39,7 @@ layui.use(['layer', 'form', 'admin', 'ax'], function () {
     var $ = layui.jquery
         , upload = layui.upload
         , form = layui.form;
-    $.get(Feng.ctxPath + '/category/getAll', {}, function (data) {
+    $.get(Feng.ctxPath + '/secondCategory/getAll', {}, function (data) {
         var $html = "";
         console.log(data);
         if(data != null){
@@ -58,10 +57,17 @@ layui.use(['layer', 'form', 'admin', 'ax'], function () {
             //append后必须从新渲染
             form.render('select');
         }
-    })
+    });
 
-    var ajax = new $ax(Feng.ctxPath + "/secondCategory/detail/" + Feng.getUrlParam("id"));
-    var result = ajax.start();
-    form.val('categoryForm', result);
-
+    var uploadInst = upload.render({
+        elem: '#uploadImage' //绑定元素
+        ,url: Feng.ctxPath + "/goods/uploadPic" //上传接口
+        ,done: function(res){
+            console.log(res.url);
+            $("#images").val($("#images").val()+","+res.url);
+        }
+        ,error: function(){
+            //请求异常回调
+        }
+    });
 });

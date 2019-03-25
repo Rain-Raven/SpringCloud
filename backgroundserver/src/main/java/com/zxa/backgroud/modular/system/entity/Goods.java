@@ -6,39 +6,26 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-@TableName("t_secondary_category")
-public class SecondCategory {
-
+@TableName("t_goods")
+public class Goods {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
-    /**
-     * 名称
-     */
     @TableField("name")
-    private String  name;
-    /**
-     * 一级分类ID
-     */
+    private String name;
     @TableField("category_id")
     private Long categoryId;
-    /**
-     * 状态
-     */
-    @TableField("status")
-    private Integer status;
-    /**
-     * 排序
-     */
-    @TableField("sort")
-    private Integer sort;
-    /**
-     * 创建时间
-     */
+    @TableField("price")
+    private Float price;
+    @TableField("simple_describe")
+    private String simpleDescribe;
+    @TableField("complex_describe")
+    private String complexDescribe;
+    @TableField("inventory")
+    private Integer inventory;
+    @TableField(value = "sales_quantity",fill = FieldFill.INSERT)
+    private Integer salesQuantity;
     @TableField(value = "create_time", fill = FieldFill.INSERT)
     private Date createTime;
-    /**
-     * 修改时间
-     */
     @TableField(value = "update_time", fill = FieldFill.UPDATE)
     private Date updateTime;
 }

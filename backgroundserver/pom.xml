@@ -48,6 +48,12 @@
             <version>${mysql-connector-java.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.github.tobato</groupId>
+            <artifactId>fastdfs-client</artifactId>
+            <version>1.26.2</version>
+        </dependency>
+
         <!--spring boot依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

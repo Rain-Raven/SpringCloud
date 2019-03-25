@@ -20,9 +20,10 @@ layui.use(['layer', 'form', 'admin', 'ax'], function () {
 
 
 
+
     // 表单提交事件
     form.on('submit(btnSubmit)', function (data) {
-        var ajax = new $ax(Feng.ctxPath + "/secondCategory/update", function (data) {
+        var ajax = new $ax(Feng.ctxPath + "/goods/update", function (data) {
             Feng.success("修改成功！");
 
             //传给上个页面，刷新table用
@@ -40,7 +41,7 @@ layui.use(['layer', 'form', 'admin', 'ax'], function () {
     var $ = layui.jquery
         , upload = layui.upload
         , form = layui.form;
-    $.get(Feng.ctxPath + '/category/getAll', {}, function (data) {
+    $.get(Feng.ctxPath + '/secondCategory/getAll', {}, function (data) {
         var $html = "";
         console.log(data);
         if(data != null){
@@ -59,9 +60,7 @@ layui.use(['layer', 'form', 'admin', 'ax'], function () {
             form.render('select');
         }
     })
-
-    var ajax = new $ax(Feng.ctxPath + "/secondCategory/detail/" + Feng.getUrlParam("id"));
+    var ajax = new $ax(Feng.ctxPath + "/goods/detail/" + Feng.getUrlParam("id"));
     var result = ajax.start();
     form.val('categoryForm', result);
-
 });

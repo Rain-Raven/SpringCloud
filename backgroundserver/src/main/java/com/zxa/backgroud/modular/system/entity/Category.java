@@ -9,7 +9,7 @@ import java.util.Date;
 @TableName("t_category")
 public class Category {
 
-    @TableId(value = "id", type = IdType.ID_WORKER)
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
     /**
      * 名称

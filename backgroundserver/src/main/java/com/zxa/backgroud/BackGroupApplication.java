@@ -16,10 +16,12 @@
 package com.zxa.backgroud;
 
 import cn.stylefeng.roses.core.config.WebAutoConfiguration;
+import com.github.tobato.fastdfs.FdfsClientConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Import;
 
 /**
  * SpringBoot方式启动类
@@ -28,6 +30,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Date 2017/5/21 12:06
  */
 @SpringBootApplication(exclude = {WebAutoConfiguration.class})
+@Import(FdfsClientConfig.class)
 public class BackGroupApplication {
 
     private final static Logger logger = LoggerFactory.getLogger(BackGroupApplication.class);

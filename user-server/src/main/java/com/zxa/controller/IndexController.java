@@ -61,13 +61,13 @@ public class IndexController {
     }
 
     @ResponseBody
-    @GetMapping("listCategory")
+    @GetMapping("/listCategory")
     public ReturnEntity listCategory(){
         return ReturnEntity.success(categoryService.getCategory());
     }
 
     @ResponseBody
-    @PostMapping("uploadPic")
+    @PostMapping("/uploadPic")
     public ReturnEntity uploadPic(MultipartFile file) throws IOException {
         if(file.isEmpty()){
             return ReturnEntity.error(ApplicationConstant.PARAMETER_ERROR);

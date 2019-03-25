@@ -68,7 +68,7 @@ public class DeptController extends BaseController {
      */
     @RequestMapping("")
     public String index() {
-        return PREFIX + "category.html";
+        return PREFIX + "dept.html";
     }
 
     /**
@@ -79,7 +79,7 @@ public class DeptController extends BaseController {
      */
     @RequestMapping("/dept_add")
     public String deptAdd() {
-        return PREFIX + "category_add.html";
+        return PREFIX + "dept_add.html";
     }
 
     /**
@@ -100,7 +100,7 @@ public class DeptController extends BaseController {
         Dept dept = deptService.getById(deptId);
         LogObjectHolder.me().set(dept);
 
-        return PREFIX + "category_edit.html";
+        return PREFIX + "dept_edit.html";
     }
 
     /**

@@ -18,10 +18,6 @@ layui.use(['layer', 'form', 'admin', 'ax'], function () {
     // 让当前iframe弹层高度适应
     admin.iframeAuto();
 
-    //获取部门信息
-    var ajax = new $ax(Feng.ctxPath + "/dept/detail/" + Feng.getUrlParam("id"));
-    var result = ajax.start();
-    $("#id").val(Feng.getUrlParam("id"))
 
 
     // 表单提交事件
@@ -40,4 +36,8 @@ layui.use(['layer', 'form', 'admin', 'ax'], function () {
         ajax.set(data.field);
         ajax.start();
     });
+
+    var ajax = new $ax(Feng.ctxPath + "/category/detail/" + Feng.getUrlParam("id"));
+    var result = ajax.start();
+    form.val('categoryForm', result);
 });

@@ -22,9 +22,13 @@ layui.use(['table', 'admin', 'ax', 'ztree'], function () {
         return [[
             {type: 'checkbox'},
             {field: 'id', sort: true, title: 'id'},
-            {field: 'name', sort: true, title: '类别名称'},
-            {field: 'status', sort: true, title: '状态'},
-            {field: 'sort', sort: true, title: '排序'},
+            {field: 'name', title: '商品名'},
+            {field: 'price', sort: true, title: '价格'},
+            {field: 'categoryId', sort: true, title: '分类ID'},
+            {field: 'simpleDescribe', title: '简单描述'},
+            {field: 'complexDescribe', title: '复杂描述'},
+            {field: 'inventory', sort: true, title: '总量'},
+            {field: 'salesQuantity', sort: true, title: '销售数量'},
             {align: 'center', toolbar: '#tableBar', title: '操作', minWidth: 200}
         ]];
     };
@@ -55,7 +59,7 @@ layui.use(['table', 'admin', 'ax', 'ztree'], function () {
         top.layui.admin.open({
             type: 2,
             title: '添加类别',
-            content: Feng.ctxPath + '/category/category_add',
+            content: Feng.ctxPath + '/goods/category_add',
             end: function () {
                 admin.getTempData('formOk') && table.reload(Dept.tableId);
             }
@@ -84,7 +88,7 @@ layui.use(['table', 'admin', 'ax', 'ztree'], function () {
         top.layui.admin.open({
             type: 2,
             title: '修改类别',
-            content: Feng.ctxPath + '/category/category_update?id=' + data.id,
+            content: Feng.ctxPath + '/goods/category_update?id=' + data.id,
             end: function () {
                 admin.getTempData('formOk') && table.reload(Dept.tableId);
             }
@@ -98,7 +102,7 @@ layui.use(['table', 'admin', 'ax', 'ztree'], function () {
      */
     Dept.onDeleteDept = function (data) {
         var operation = function () {
-            var ajax = new $ax(Feng.ctxPath + "/category/delete", function () {
+            var ajax = new $ax(Feng.ctxPath + "/goods/delete", function () {
                 Feng.success("删除成功!");
                 table.reload(Dept.tableId);
             }, function (data) {
@@ -113,7 +117,7 @@ layui.use(['table', 'admin', 'ax', 'ztree'], function () {
     // 渲染表格
     var tableResult = table.render({
         elem: '#' + Dept.tableId,
-        url: Feng.ctxPath + '/category/list',
+        url: Feng.ctxPath + '/goods/list',
         page: true,
         height: "full-158",
         cellMinWidth: 100,

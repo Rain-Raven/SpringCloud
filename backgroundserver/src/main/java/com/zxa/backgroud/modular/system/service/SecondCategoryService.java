@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -73,4 +74,7 @@ public class SecondCategoryService extends ServiceImpl<SecondCategoryMapper, Sec
         return this.secondCategoryMapper.list(page, condition, deptId);
     }
 
+    public List<SecondCategory> getAll() {
+        return secondCategoryMapper.getAll();
+    }
 }

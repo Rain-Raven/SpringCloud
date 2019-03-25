@@ -3,32 +3,32 @@ package com.zxa.backgroud.modular.system.controller;
 import cn.hutool.core.bean.BeanUtil;
 import cn.stylefeng.roses.core.base.controller.BaseController;
 import cn.stylefeng.roses.core.reqres.response.ResponseData;
-import cn.stylefeng.roses.core.treebuild.DefaultTreeBuildFactory;
 import cn.stylefeng.roses.core.util.ToolUtil;
 import cn.stylefeng.roses.kernel.model.exception.RequestEmptyException;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.zxa.backgroud.core.common.annotion.BussinessLog;
-import com.zxa.backgroud.core.common.annotion.Permission;
-import com.zxa.backgroud.core.common.constant.dictmap.DeptDict;
+import com.github.tobato.fastdfs.domain.StorePath;
+import com.github.tobato.fastdfs.service.FastFileStorageClient;
 import com.zxa.backgroud.core.common.constant.factory.ConstantFactory;
-import com.zxa.backgroud.core.common.node.TreeviewNode;
-import com.zxa.backgroud.core.common.node.ZTreeNode;
 import com.zxa.backgroud.core.common.page.LayuiPageFactory;
 import com.zxa.backgroud.core.log.LogObjectHolder;
 import com.zxa.backgroud.modular.system.entity.Category;
-import com.zxa.backgroud.modular.system.entity.Dept;
+import com.zxa.backgroud.modular.system.entity.Goods;
+import com.zxa.backgroud.modular.system.entity.GoodsImage;
+import com.zxa.backgroud.modular.system.entity.SecondCategory;
 import com.zxa.backgroud.modular.system.model.DeptDto;
 import com.zxa.backgroud.modular.system.service.CategoryService;
-import com.zxa.backgroud.modular.system.service.DeptService;
-import com.zxa.backgroud.modular.system.warpper.DeptTreeWrapper;
+import com.zxa.backgroud.modular.system.service.GoodsImageService;
+import com.zxa.backgroud.modular.system.service.GoodsService;
 import com.zxa.backgroud.modular.system.warpper.DeptWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -37,12 +37,20 @@ import java.util.Random;
  * 类别控制器
  */
 @Controller
-@RequestMapping("/category")
-public class CategoryController extends BaseController {
-    private String PREFIX = "/modular/system/category/";
+@RequestMapping("/goods")
+public class GoodsController extends BaseController {
+
+    @Autowired(required = false)
+    FastFileStorageClient fastFileStorageClient;
+
+    private final String imagePath="120.79.225.94:8080";
+
+    private String PREFIX = "/modular/system/goods/";
 
     @Autowired
-    private CategoryService categoryService;
+    private GoodsService goodsService;
+    @Autowired
+    private GoodsImageService goodsImageService;
 
     /**
      * 跳转到部门管理首页
@@ -80,10 +88,31 @@ public class CategoryController extends BaseController {
         }
 
         //缓存部门修改前详细信息
-        Category category = categoryService.getById(id);
-        LogObjectHolder.me().set(category);
+        Goods goods = goodsService.getById(id);
+        LogObjectHolder.me().set(goods);
 
         return PREFIX + "category_edit.html";
+    }
+
+    @RequestMapping(value = "/detail/{id}")
+    @ResponseBody
+    public Object detail(@PathVariable("id") Long id) {
+        Goods goods = goodsService.getById(id);
+        return goods;
+    }
+
+    @ResponseBody
+    @PostMapping("/uploadPic")
+    public Map uploadPic(MultipartFile file) throws IOException {
+        if(file.isEmpty()){
+            return new HashMap();
+        }
+        StorePath storePath=fastFileStorageClient.uploadFile(file.getInputStream(),file.getSize(),"png",null);
+        String url=imagePath+"/"+storePath.getFullPath();
+        Map map=new HashMap();
+        map.put("url",url);
+        return map;
+
     }
 
 
@@ -95,8 +124,25 @@ public class CategoryController extends BaseController {
      */
     @RequestMapping(value = "/add")
     @ResponseBody
-    public ResponseData add(Category category) {
-        this.categoryService.addCategory(category);
+    public ResponseData add(Goods goods,String images) {
+        this.goodsService.addCategory(goods);
+        String[] imageArray=images.split(",");
+        boolean start=true;
+        for (String s:imageArray) {
+            if (!StringUtils.isEmpty(s)){
+                GoodsImage goodsImage=new GoodsImage();
+                goodsImage.setGoodsId(goods.getId());
+                goodsImage.setImage(s);
+                if (start){
+                    goodsImage.setType(1);
+                    start=false;
+                }
+                else {
+                    goodsImage.setType(2);
+                }
+                goodsImageService.addCategory(goodsImage);
+            }
+        }
         return SUCCESS_TIP;
     }
 
@@ -110,7 +156,7 @@ public class CategoryController extends BaseController {
     @ResponseBody
     public Object list(@RequestParam(value = "condition", required = false) String condition,
                        @RequestParam(value = "deptId", required = false) String deptId) {
-        Page<Map<String, Object>> list = this.categoryService.list(condition, deptId);
+        Page<Map<String, Object>> list = this.goodsService.list(condition, deptId);
         Page<Map<String, Object>> wrap = new DeptWrapper(list).wrap();
         return LayuiPageFactory.createPageInfo(wrap);
     }
@@ -118,16 +164,9 @@ public class CategoryController extends BaseController {
     @RequestMapping(value = "/getAll")
     @ResponseBody
     public List<Category> getAll() {
-        return categoryService.getAll();
+        return goodsService.getAll();
     }
 
-
-    @RequestMapping(value = "/detail/{id}")
-    @ResponseBody
-    public Object detail(@PathVariable("id") Long id) {
-        Category category = categoryService.getById(id);
-        return category;
-    }
 
     /**
      * 修改部门
@@ -135,8 +174,8 @@ public class CategoryController extends BaseController {
      */
     @RequestMapping(value = "/update")
     @ResponseBody
-    public ResponseData update(Category category) {
-        categoryService.editCategory(category);
+    public ResponseData update(Goods goods) {
+        goodsService.editCategory(goods);
         return SUCCESS_TIP;
     }
 
@@ -152,7 +191,7 @@ public class CategoryController extends BaseController {
         //缓存被删除的部门名称
         LogObjectHolder.me().set(ConstantFactory.me().getDeptName(id));
 
-        categoryService.removeById(id);
+        goodsService.removeById(id);
 
         return SUCCESS_TIP;
     }

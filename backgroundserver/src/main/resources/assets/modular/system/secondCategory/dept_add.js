@@ -20,7 +20,7 @@ layui.use(['layer', 'form', 'admin', 'ax'], function () {
 
     // 表单提交事件
     form.on('submit(btnSubmit)', function (data) {
-        var ajax = new $ax(Feng.ctxPath + "/category/add", function (data) {
+        var ajax = new $ax(Feng.ctxPath + "/secondCategory/add", function (data) {
             Feng.success("添加成功！");
 
             //传给上个页面，刷新table用
@@ -34,4 +34,28 @@ layui.use(['layer', 'form', 'admin', 'ax'], function () {
         ajax.set(data.field);
         ajax.start();
     });
+
+    var $ = layui.jquery
+        , upload = layui.upload
+        , form = layui.form;
+    $.get(Feng.ctxPath + '/category/getAll', {}, function (data) {
+        var $html = "";
+        console.log(data);
+        if(data != null){
+            console.log(data);
+            $.each(data, function (index, item) {
+                if (item.proType){
+                    $html += "<option class='generate' value='" + item.id + "'>" + item.proType + "</option>";
+                }else{
+                    $html += "<option value='" + item.id + "'>" + item.name + "</option>";
+                }
+            });
+            $("select[name='categoryId']").append($html);
+            //反选
+            /*$("select[name='categoryId']").val($("#???").val());*/
+            //append后必须从新渲染
+            form.render('select');
+        }
+    })
+
 });
