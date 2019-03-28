@@ -43,6 +43,7 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
         freeset.add(Pattern.compile("/user/*"));
         freeset.add(Pattern.compile("/index/*"));
         freeset.add(Pattern.compile("/error"));
+        freeset.add(Pattern.compile("/goods"));
     }
 
     @Override

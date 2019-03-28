@@ -22,23 +22,6 @@
 	<script src="../js/jquery.easydropdown.js" th:src="@{/js/jquery.easydropdown.js}"></script>
 	<script src="../js/jquery.etalage.min.js" th:src="@{/js/jquery.etalage.min.js}"></script>
 	<!---->
-<script>
-			jQuery(document).ready(function($){
-
-				$('#etalage').etalage({
-					thumb_image_width: 300,
-					thumb_image_height: 400,
-					source_image_width: 900,
-					source_image_height: 1200,
-					show_hint: true,
-					click_callback: function(image_anchor, instance_id){
-						alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
-					}
-				});
-
-			});
-		</script>
-
 </head>
 <body>
 <!--header-->
@@ -51,40 +34,24 @@
 	      <div class="single_grid">
 				<div class="grid images_3_of_2">
 						<ul id="etalage">
-							<li>
-									<img class="etalage_thumb_image img-responsive" src="../s4.jpg"  th:src="@{/images/s4.jpg}"/>
-									<img class="etalage_source_image img-responsive" src="../si4.jpg" th:src="@{/images/si4.jpg}" title="" />
-
-							</li>
-							<li>
-								<img class="etalage_thumb_image img-responsive" src="../images/s2.jpg" th:src="@{/images/s2.jpg}"  />
-								<img class="etalage_source_image img-responsive" src="../images/si2.jpg"  th:src="@{/images/si2.jpg}" title="" />
-							</li>
-							<li>
-								<img class="etalage_thumb_image img-responsive" src="../images/s3.jpg"  th:src="@{/images/s3.jpg}" />
-								<img class="etalage_source_image img-responsive" src="../images/si3.jpg" th:src="@{/images/si3.jpg}"/>
-							</li>
-						    <li>
-								<img class="etalage_thumb_image img-responsive" src="../images/s1.jpg" th:src="@{/images/s1.jpg}" />
-								<img class="etalage_source_image img-responsive" src="../images/si1.jpg" th:src="@{/images/si1.jpg}"/>
-							</li>
 						</ul>
 						 <div class="clearfix"> </div>		
 				  </div> 
 				  <div class="desc1 span_3_of_2">
+					  <input id="goodId" type="hidden" th:value="${good.id}">
 				  	<ul class="back">
-                	  <li><i class="back_arrow"> </i>Back to <a href="index.html">Women's Clothing</a></li>
+                	  <li><i class="back_arrow"> </i>回到<a th:href="@{'/index/product/'+${good.categoryId}}" th:text="${good.categoryName}"></a></li>
                     </ul>
-					<h1>Sofi Blouse</h1>
+					<h1 th:text="${good.name}"></h1>
 					<ul class="price_single">
-					  <li class="head"><h2>$98.95</h2></li>
-					  <li class="head_desc sky-form"><a href="#">12 reviews</a>
+					  <li class="head"><h2 th:text="'￥'+${good.price}"></h2></li>
+					  <li class="head_desc sky-form"><a href="#" th:text="'商品剩余'+${good.inventory}"></a>
 					  </li>
 					  <div class="clearfix"> </div>
 					</ul>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum</p>
+					<p th:text="${good.complexDescribe}"></p>
 				    
-			         <a href="#" class="now-get">Add To Cart</a>
+			         <a href="#" class="now-get">添加到购物车</a>
 			        
 				</div>
           	    <div class="clearfix"> </div>
@@ -96,8 +63,48 @@
 			<li><img src="../images/pi3.jpg" th:src="@{/images/pi3.jpg}"/><div class="grid-flex"><a href="#">Bloch</a><p>Rs 850</p></div></li>
 			<li><img src="../images/pi4.jpg" th:src="@{/images/pi4.jpg}"/><div class="grid-flex"><a href="#">Capzio</a><p>Rs 850</p></div></li>
 		 </ul>
+			<div class="toogle">
+				<h3 class="m_3">商品细节</h3>
+				<p class="m_text" th:text="${good.complexDescribe}"></p>
+			</div>
+		</div>
+		 <!--sidebar-->
+		 <div th:replace="../templates/sidebar :: sidebar"></div>
+		 <!--sidebar end-->
+		 <div class="clearfix"> </div>
+	 </div>
+<!--footer-->
+<div th:replace="../templates/footer :: footer"></div>
+<!--footer end-->
 	    <script type="text/javascript">
-		 $(window).load(function() {
+		 $(function() {
+		     init();
+
+             $.ajax({
+				 async: false,
+                 url: "/goods/getGoodImage",
+                 type: "post",
+                 data: {id:$("#goodId").val()},
+                 dataType: "json",
+                 success(data){
+                     $.each(data.data,function (i,image) {
+                         $("#etalage").append("<li>\n" +
+                             "<img class=\"etalage_thumb_image img-responsive\" src=\"http://"+image+"\"/>\n" +
+                             "<img class=\"etalage_source_image img-responsive\" style=\"display: none\" src=\"http://"+image+"\" title=\"\" />\n" +
+                             "</li>")
+                     });
+                 }
+             });
+             $('#etalage').etalage({
+                 thumb_image_width: 300,
+                 thumb_image_height: 400,
+                 source_image_width: 900,
+                 source_image_height: 1200,
+                 show_hint: true,
+                 click_callback: function(image_anchor, instance_id){
+                     alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+                 }
+             });
 			$("#flexiselDemo1").flexisel({
 				visibleItems: 5,
 				animationSpeed: 1000,
@@ -122,23 +129,26 @@
 		    });
 		    
 		});
+
+         function init() {
+             var userName = $.cookie('userName');
+             if (userName == null) {
+                 $("#personInfo").hide();
+                 $("#shoppingCartUrl").hide();
+                 $("#exitUrl").hide();
+                 $("#loginUrl").show();
+             }
+             else {
+                 $("#personInfo").show();
+                 $("#userName").text(userName);
+                 $("#shoppingCartUrl").show();
+                 $("#exitUrl").show();
+                 $("#loginUrl").hide();
+             }
+         }
 	</script>
 	<script type="text/javascript" src="../js/jquery.flexisel.js" th:src="@{/js/jquery.flexisel.js}"></script>
 
-          	    	<div class="toogle">
-				     	<h3 class="m_3">Product Details</h3>
-				     	<p class="m_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-				     </div>	
-          	   </div>
-
-		 <!--sidebar-->
-		 <div th:replace="../templates/sidebar :: sidebar"></div>
-		 <!--sidebar end-->
-<div class="clearfix"> </div>			
-		</div>
-<!--footer-->
-<div th:replace="../templates/footer :: footer"></div>
-<!--footer end-->
 
 </body>
 </html>

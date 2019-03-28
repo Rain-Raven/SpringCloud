@@ -125,6 +125,7 @@ public class GoodsController extends BaseController {
     @RequestMapping(value = "/add")
     @ResponseBody
     public ResponseData add(Goods goods,String images) {
+        goods.setSalesQuantity(0);
         this.goodsService.addCategory(goods);
         String[] imageArray=images.split(",");
         boolean start=true;
