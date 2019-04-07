@@ -87,7 +87,7 @@ layui.use(['table', 'admin', 'ax', 'ztree'], function () {
         admin.putTempData('formOk', false);
         top.layui.admin.open({
             type: 2,
-            title: '修改类别',
+            title: '修改商品',
             content: Feng.ctxPath + '/goods/category_update?id=' + data.id,
             end: function () {
                 admin.getTempData('formOk') && table.reload(Dept.tableId);

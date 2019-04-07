@@ -4,7 +4,7 @@
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-    <title>商品</title>
+    <title>搜索</title>
     <!--css-->
     <link href="../css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" type="text/css" media="all"/>
     <link href="../css/form.css" th:href="@{/css/form.css}" rel="stylesheet" type="text/css" media="all"/>
@@ -33,20 +33,11 @@
 <!--header end-->
 <!-- start content -->
 <div class="container">
-    <input id="categoryId" type="hidden" th:value="${id}">
+    <input id="key" type="hidden" th:value="${key}">
     <div class="women-product">
         <div class=" w_content">
             <div class="women">
-                <h4>商品数量总计 - <span id="count">9 </span></h4>
-                <ul class="w_nav">
-                    <li>排序方式 :</li>
-                    <li><a id="order1" href="javascript:productReload(1)">流行度</a></li>
-                    |
-                    <li><a id="order2" class="active" href="javascript:productReload(2)">最新商品 </a></li>
-                    |
-                    <li><a id="order3" href="javascript:productReload(3)">售价</a></li>
-                    <div class="clearfix"></div>
-                </ul>
+                <h4>商品数量总计 - <span id="count">0</span></h4>
                 <div class="clearfix"></div>
             </div>
         </div>
@@ -69,15 +60,12 @@
     $(function () {
         init();
         $.ajax({
-            url: "/goods/getGoodsByPage",
+            url: "/goods/getGoodsByKey",
             type: "post",
-            data: {categoryId:$("#categoryId").val(),pageNumber:1,pageSize:1000,order:1},
+            data: {key:$("#key").val(),pageNumber:1,pageSize:1000,order:1},
             dataType: "json",
             success(data){
                 $("#count").text(data.data.length);
-                $("#order1").css("pointer-events","none");
-                $("#order2").css("pointer-events","auto");
-                $("#order3").css("pointer-events","auto");
                 $.each(data.data,function (i,good) {
                     $("#grids").append('<div class=\"  product-grid\">\n' +
                         "                <div class=\"content_box\"><a href=\"\\index\\single\\"+good.id+"\">\n" +
@@ -114,54 +102,6 @@
             $("#exitUrl").show();
             $("#loginUrl").hide();
         }
-    }
-
-    function productReload(type) {
-        if (type != 1 && type != 2 &&  type!=3){
-            return;
-        }
-        if (type==1){
-            $("#order1").css("pointer-events","none");
-            $("#order2").css("pointer-events","auto");
-            $("#order3").css("pointer-events","auto");
-        }
-        if (type==2){
-            $("#order2").css("pointer-events","none");
-            $("#order1").css("pointer-events","auto");
-            $("#order3").css("pointer-events","auto");
-        }
-        if (type==3){
-            $("#order3").css("pointer-events","none");
-            $("#order2").css("pointer-events","auto");
-            $("#order1").css("pointer-events","auto");
-        }
-        $.ajax({
-            url: "/goods/getGoodsByPage",
-            type: "post",
-            data: {categoryId:$("#categoryId").val(),pageNumber:1,pageSize:1000,order:type},
-            dataType: "json",
-            success(data){
-                $("#count").text(data.data.length);
-                $(".product-grid").remove();
-                $.each(data.data,function (i,good) {
-                    $("#grids").append('<div class=\"  product-grid\">\n' +
-                        "                <div class=\"content_box\"><a href=\"\\index\\single\\"+good.id+"\">\n" +
-                        "                    <div class=\"left-grid-view grid-view-left\">\n" +
-                        "                        <img src=\"http://"+good.image+"\"\n" +
-                        "                             class=\"img-responsive watch-right\" style=\"width: 179px;height: 250px\" \n" +
-                        "                             alt=\"\"/>\n" +
-                        "                        <div class=\"mask\">\n" +
-                        "                            <div class=\"info\">快速查看</div>\n" +
-                        "                        </div>\n" +
-                        "                </a>\n" +
-                        "                </div>\n" +
-                        "                <h4><a href=\"\\index\\single\\"+good.id+"\">"+good.name+"</a></h4>\n" +
-                        "                <p>"+good.simpleDescribe+"</p>\n￥" +good.price+
-                        "            </div>\n" +
-                        "        </div>");
-                });
-            }
-        });
     }
 </script>
 </html>

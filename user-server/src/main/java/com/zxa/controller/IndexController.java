@@ -28,14 +28,16 @@ public class IndexController {
     @Autowired
     ShoppingCartService shoppingCartService;
     @Autowired
-    FastFileStorageClient fastFileStorageClient;
-    @Autowired
     GoodsService goodsService;
+    @Autowired
+    FastFileStorageClient fastFileStorageClient;
     @Value("${default.image.path}")
     private String imagePath;
 
     @GetMapping(value = {"","/index"})
     public String index(Model model){
+        model.addAttribute("newGoods",goodsService.getNewGoods(0,3));
+        model.addAttribute("newGoods2",goodsService.getNewGoods(3,2 ));
         model.addAttribute("category",categoryService.getCategory());
         return "index";
     }
@@ -84,6 +86,18 @@ public class IndexController {
         return "collection";
     }
 
+    @GetMapping(value = "/order/{id}")
+    public String order(@PathVariable int id, Model model){
+        List<UserShoppingCartItem> shoppingCartItems=shoppingCartService.getUserShoppingCartList(id);
+        if (shoppingCartItems.isEmpty()){
+            model.addAttribute("category",categoryService.getCategory());
+            return "shoppingCart_null";
+        }
+        model.addAttribute("category",categoryService.getCategory());
+        model.addAttribute("shoppingCartList",shoppingCartItems);
+        return "order";
+    }
+
     @ResponseBody
     @GetMapping("/listCategory")
     public ReturnEntity listCategory(){
@@ -102,4 +116,10 @@ public class IndexController {
 
     }
 
+    @GetMapping(value = "/searchPage")
+    public String searchPage(String key, Model model){
+        model.addAttribute("category",categoryService.getCategory());
+        model.addAttribute("key",key);
+        return "search";
+    }
 }

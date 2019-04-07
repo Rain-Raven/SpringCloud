@@ -115,12 +115,12 @@ public class UserController {
      */
     @ResponseBody
     @RequestMapping(value = "/userRegister",method = RequestMethod.POST)
-    public ReturnEntity userRegister(@Valid RegisterParameter registerParameter, BindingResult bindingResult){
+    public String userRegister(@Valid RegisterParameter registerParameter, BindingResult bindingResult){
         if (bindingResult.hasErrors()){
-            return ReturnEntity.error(ApplicationConstant.PARAMETER_ERROR);
+            return "index";
         }
         if (userService.emailIsExist(registerParameter.getEmail())){
-            return ReturnEntity.error(ApplicationConstant.EMAIL_IS_EXIST);
+            return "index";
         }
         String captcha= (String) redisTemplate.opsForValue().get(registerParameter.getEmail());
       /* 暂时不进行校验
@@ -134,7 +134,7 @@ public class UserController {
         user.setEmail(registerParameter.getEmail());
         user.setPassword(encryptedPassword);
         userService.registerUser(user);
-        return ReturnEntity.success(user);
+        return "index";
     }
 
     /**

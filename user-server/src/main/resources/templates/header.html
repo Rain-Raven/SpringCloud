@@ -10,6 +10,7 @@
 <body>
 <!--header-->
 <link th:href="@{/layui/css/layui.css}" rel="stylesheet" type="text/css" media="all"/>
+<script src="/js/jquery.cookie.js" th:src="@{/layui/layui.all.js}"></script>
 <div th:fragment="header">
 <div class="header">
     <div class="top-header">
@@ -52,8 +53,8 @@
                     <a href="index" th:href="@{/index}"><img src="../images/logo.png" th:src="@{/images/logo.png}" alt="logo" /></a>
                 </div>
                 <div class="search">
-                    <input type="text" onblur="if(!this.value)this.value='搜索您感兴趣的商品... ';return true;" onfocus="if(this.value=='搜索您感兴趣的商品... ')this.value='';return true;" value="搜索您感兴趣的商品... " >
-                    <input type="button" class="layui-btn"  value="搜索" id="goods-search" style="width: 73px">
+                    <input id="search-key" type="text" onblur="if(!this.value)this.value='搜索您感兴趣的商品... ';return true;" onfocus="if(this.value=='搜索您感兴趣的商品... ')this.value='';return true;" value="搜索您感兴趣的商品... " >
+                    <input type="button" class="btn btn-primary"  value="搜索" id="goods-search" style="width: 73px" onclick="searchKey()">
 
                 </div>
                 <div class="clearfix"> </div>
@@ -72,5 +73,7 @@
 </div>
 </div>
 <!---->
+<script>
+</script>
 </body>
 </html>

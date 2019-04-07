@@ -1,60 +1,67 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	  xmlns:th="http://www.thymeleaf.org"
-	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
-	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-<title>Login</title>
-	<!--css-->
-<link href="../css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" type="text/css" media="all" />
-	<link href="../css/form.css" th:href="@{/css/form.css}" rel="stylesheet" type="text/css" media="all" />
-	<link href="../css/style.css" th:href="@{/css/style.css}"  rel="stylesheet" type="text/css" media="all" />
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-	<!---->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--js-->
-<script src="../js/jquery-1.11.1.js" th:src="@{/js/jquery-1.11.1.js}"></script>
-<script src="../js/jquery.validate.min.js" th:src="@{/js/jquery.validate.min.js}"></script>
-<script src="/js/jquery.cookie.js" th:src="@{/js/jquery.cookie.js}"></script>
-<script src="../js/jquery.easydropdown.js" th:src="@{/js/jquery.easydropdown.js}"></script>
-	<!---->
+    <title>登陆</title>
+    <!--css-->
+    <link href="../css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/form.css" th:href="@{/css/form.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/style.css" th:href="@{/css/style.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!---->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!--js-->
+    <script src="../js/jquery-1.11.1.js" th:src="@{/js/jquery-1.11.1.js}"></script>
+    <script src="../js/jquery.validate.min.js" th:src="@{/js/jquery.validate.min.js}"></script>
+    <script src="/js/jquery.cookie.js" th:src="@{/js/jquery.cookie.js}"></script>
+    <script src="../js/jquery.easydropdown.js" th:src="@{/js/jquery.easydropdown.js}"></script>
+    <script src="/js/jquery.cookie.js" th:src="@{/js/commom.js}"></script>
+    <!---->
 </head>
 <body>
 <!--header-->
 <div th:replace="../templates/header :: header"></div>
 <!--header end-->
-	<div class="container">
-		
-      	   <div class="account_grid">
-			   <div class=" login-right">
-			  	<h3>用户登陆</h3>
-				<p>如果你有了轻步服务的账号，请登录。</p>
-				<form id="user-login" method="post" action="/user/userLogin" th:action="@{/user/userLogin}">
-				  <div>
-					<span>邮箱地址<label>*</label></span>
-					<input class="form-input" type="text" name="email" id="email">
-				  </div>
-				  <div>
-					<span>密码<label>*</label></span>
-					<input  class="form-input" type="password" name="password" id="password">
-				  </div>
-				  <a class="forgot" href="#">忘记密码？</a>
-				  <input type="submit" value="登陆">
-			    </form>
-			   </div>	
-			    <div class="login-left">
-			  	 <h3>新的用户</h3>
-				 <p>在我们商店创建一个帐户，您将能够更快的结账，存储多个送货地址，查看和跟踪您的订单，收藏商品以便在未来购买和更多功能。</p>
-				 <a class="acount-btn" href="/index/register" th:href="@{/index/register}">注册账号</a>
-			   </div>
-			   <div class="clearfix"> </div>
-			 </div>
-		<!--sidebar-->
-		<div th:replace="../templates/sidebar :: sidebar"></div>
-		<!--sidebar end-->
-			  <div class="clearfix"> </div>
-      	 </div>
+<div class="container">
+
+    <div class="account_grid">
+        <div class=" login-right">
+            <h3>用户登陆</h3>
+            <p>如果你有了轻步服务的账号，请登录。</p>
+            <form id="user-login" method="post" action="/user/userLogin" th:action="@{/user/userLogin}">
+                <div>
+                    <span>邮箱地址<label>*</label></span>
+                    <input class="form-input" type="text" name="email" id="email">
+                </div>
+                <div>
+                    <span>密码<label>*</label></span>
+                    <input class="form-input" type="password" name="password" id="password">
+                </div>
+                <a class="forgot" href="#">忘记密码？</a>
+                <input type="submit" value="登陆">
+            </form>
+        </div>
+        <div class="login-left">
+            <h3>新的用户</h3>
+            <p>在我们商店创建一个帐户，您将能够更快的结账，存储多个送货地址，查看和跟踪您的订单，收藏商品以便在未来购买和更多功能。</p>
+            <a class="acount-btn" href="/index/register" th:href="@{/index/register}">注册账号</a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!--sidebar-->
+    <div th:replace="../templates/sidebar :: sidebar"></div>
+    <!--sidebar end-->
+    <div class="clearfix"></div>
+</div>
 <!--footer-->
 <div th:replace="../templates/footer :: footer"></div>
 <!--footer end-->
@@ -62,7 +69,7 @@
 
 </body>
 <script>
-    $().ready(function() {
+    $().ready(function () {
         init();
 // 在键盘按下并释放及提交后验证提交表单
         $("#user-login").validate({
@@ -87,50 +94,51 @@
     });
 
 
-$("#user-login").submit(function (event) {
-    event.preventDefault();
-    var form = $(this);
+    $("#user-login").submit(function (event) {
+        event.preventDefault();
+        var form = $(this);
 
-    if (!form.hasClass('fupload')) {
-        //普通表单
-        $.ajax({
-            type: form.attr('method'),
-            url: form.attr('action'),
-            data: form.serialize(),
-            dataType: "json"
-        }).success(function (result) {
-            if (result.code==200){
-                window.location.href="index";
-            }
-            console.log(result.message);
-        }).fail(function (jqXHR, textStatus, errorThrown) {
-            alert("error")
-            //错误信息
-        });
-    }
-    else {
-        // mulitipart form,如文件上传类
-        var formData = new FormData(this);
-        $.ajax({
-            type: form.attr('method'),
-            url: form.attr('action'),
-            data: formData,
-            mimeType: "multipart/form-data",
-            contentType: false,
-            cache: false,
-            processData: false
-        }).success(function () {
-            //成功提交
-        }).fail(function (jqXHR, textStatus, errorThrown) {
-            //错误信息
-        });
-    };
-});
+        if (!form.hasClass('fupload')) {
+            //普通表单
+            $.ajax({
+                type: form.attr('method'),
+                url: form.attr('action'),
+                data: form.serialize(),
+                dataType: "json"
+            }).success(function (result) {
+                if (result.code == 200) {
+                    window.location.href = "index";
+                }
+                console.log(result.message);
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                alert("error")
+                //错误信息
+            });
+        }
+        else {
+            // mulitipart form,如文件上传类
+            var formData = new FormData(this);
+            $.ajax({
+                type: form.attr('method'),
+                url: form.attr('action'),
+                data: formData,
+                mimeType: "multipart/form-data",
+                contentType: false,
+                cache: false,
+                processData: false
+            }).success(function () {
+                //成功提交
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                //错误信息
+            });
+        }
+        ;
+    });
 
 
     function init() {
-        var userName=$.cookie('userName');
-        if (userName==null){
+        var userName = $.cookie('userName');
+        if (userName == null) {
             $("#personInfo").hide();
             $("#shoppingCartUrl").hide();
             $("#exitUrl").hide();

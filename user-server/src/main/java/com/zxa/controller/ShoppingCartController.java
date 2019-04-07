@@ -91,6 +91,35 @@ public class ShoppingCartController {
         return "redirect:/index/collection/"+user.getId();
     }
 
+
+    @ResponseBody
+    @PostMapping("/createOrder")
+    public ReturnEntity createOrder(HttpServletRequest request){
+        String sessionId=getSessionId(request);
+        if (StringUtils.isEmpty(sessionId)){
+            return ReturnEntity.error(ApplicationConstant.PLEASE_LOGIN);
+        }
+        User user= (User) redisTemplate.opsForValue().get(SESSION_ID_PRE+sessionId);
+        return ReturnEntity.success("/index/order/"+user.getId());
+    }
+
+    /***
+     * 我的购物车
+     * @param request
+     * @return
+     */
+    @RequestMapping("/getOrder")
+    public String getOrder(HttpServletRequest request,String userName,String phoneNumber,String city,String address){
+        String sessionId=getSessionId(request);
+        if (StringUtils.isEmpty(sessionId)){
+            return "redirect:/index/login";
+        }
+        User user= (User) redisTemplate.opsForValue().get(SESSION_ID_PRE+sessionId);
+        shoppingCartService.getOrder(user.getId());
+        /**do Something*/
+        return "redirect:/index";
+    }
+
     private String  getSessionId(HttpServletRequest request){
         String sessionId = request.getHeader(AuthenticationInterceptor.sessionName);
         if (sessionId == null) {

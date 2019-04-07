@@ -4,13 +4,14 @@
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-    <title>购物车</title>
+    <title>订单</title>
     <!--css-->
     <link href="../css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" type="text/css" media="all"/>
     <link href="../css/collection.css" th:href="@{/css/collection.css}" rel="stylesheet" type="text/css" media="all"/>
     <link href="../css/form.css" th:href="@{/css/form.css}" rel="stylesheet" type="text/css" media="all"/>
     <link href="../css/style.css" th:href="@{/css/style.css}" rel="stylesheet" type="text/css" media="all"/>
     <link th:href="@{/layui/css/layui.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link th:href="@{/css/order.css}" rel="stylesheet" type="text/css" media="all"/>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
     <!---->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -38,7 +39,7 @@
 <div th:replace="../templates/sidebar :: sidebar"></div>
 <!--sidebar end-->
 <div class="container">
-    <h1>购物车</h1>
+    <h1>订单</h1>
     <div class="goods-page">
         <div class="goods-data clearfix">
             <div class="table-wrapper-responsive">
@@ -63,8 +64,8 @@
                         </td>
                         <td class="goods-page-quantity">
                             <div class="product-quantity">
-                                <input th:id="'quantity'+${item.id}" type="number" th:value="${item.quantity}"
-                                       readonly="" class="form-control input-sm item-quantity">
+                                <strong class="item-quantity"
+                                        th:id="'quantity'+${item.id}">[[${item.quantity}]]</strong>
                             </div>
                         </td>
                         <td class="goods-page-price">
@@ -73,39 +74,57 @@
                         <td class="goods-page-total">
                             <strong><span>￥</span></strong><strong th:id="'total'+${item.id}" class="item-total">[[${item.price}*${item.quantity}]]</strong>
                         </td>
-                        <td class="del-goods-col">
-                            <a class="del-goods" th:href="'javascript:del('+${item.id}+')'">&nbsp;</a>
-                            <a class="add-goods" th:href="'javascript:add('+${item.id}+')'">&nbsp;</a>
-                        </td>
                     </tr>
                     </tbody>
                 </table>
             </div>
-            <div class="cart-total">
-                <div class="shopping-total">
-                    <ul>
-                        <li style="font-size: 150%">
-                            <em>平均价</em>
-                            <strong><span>￥</span></strong><strong id="average-price" class="price">47.00</strong>
-                        </li>
-                        <li class="shopping-total-price" style="font-size: 150%">
-                            <em>总价</em>
-                            <strong><span>￥</span></strong><strong id="total-price" class="price">50.00</strong>
-                        </li>
-                    </ul>
+            <form type="post" action="/shoppingCart/getOrder" id="get-order">
+
+                <div class="panel-body row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <label for="name-dd">收货人<span class="require">*</span></label>
+                            <input type="text" name="userName" id="name-dd" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone-dd">手机号码 <span class="require">*</span></label>
+                            <input type="text" name="phoneNumber" id="telephone-dd" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="city-dd">收货城市<span class="require">*</span></label>
+                            <input type="text" name="city" id="city-dd" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="address-dd">收货地址<span class="require">*</span></label>
+                            <input type="text" name="address" id="address-dd" class="form-control">
+                        </div>
+                    </div>
                 </div>
-                <button class="btn btn-default"  id="to-index" type="button">继续购物<i class="fa fa-shopping-cart"></i>
-                </button>
-                <button class="btn btn-primary" id="buy" type="button" onclick="createOrder()">生成订单<i class="fa fa-check"></i></button>
-            </div>
-            <div>
-            </div>
+                <div class="cart-total">
+                    <div class="shopping-total">
+                        <ul>
+                            <li style="font-size: 150%">
+                                <em>平均价</em>
+                                <strong><span>￥</span></strong><strong id="average-price" class="price">47.00</strong>
+                            </li>
+                            <li class="shopping-total-price" style="font-size: 150%">
+                                <em>总价</em>
+                                <strong><span>￥</span></strong><strong id="total-price" class="price">50.00</strong>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="btn btn-default" id="to-index" type="button">继续购物<i class="fa fa-shopping-cart"></i>
+                    </button>
+                    <button class="btn btn-primary" id="buy" type="submit">结算<i class="fa fa-check"></i></button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
-        <!--footer-->
-        <div th:replace="../templates/footer :: footer"></div>
-        <!--footer end-->
+<!--footer-->
+<div th:replace="../templates/footer :: footer"></div>
+<!--footer end-->
 
 </body>
 <script>
@@ -132,78 +151,17 @@
         }
     }
 
-    function add(itemId) {
-        var newValue = $("#quantity" + itemId).val();
-        newValue = parseInt(newValue) + 1;
-        $.ajax({
-            url: "/shoppingCart/updateQuantity",
-            data: {id: itemId, newQuantity: newValue},
-            type: "post",
-            dataType: "json",
-            xhrFields: {withCredentials: true},
-            success(result) {
-                if (result.code == "200") {
-                    $("#quantity" + itemId).val(result.data);
-                    updateItemTotal(itemId, result.data);
-                    updateTotal();
-                }
-                else {
-                    layer.open({
-                        title: '错误'
-                        , content: result.message
-                    });
-                }
-            }
-        });
-    }
-
-    function del(itemId) {
-        layer.confirm('确定要删除购物车条目？', {
-            btn: ['确定', '取消'] //可以无限个按钮
-            , yes: function (index, layero) {
-                $.ajax({
-                    url: "/shoppingCart/deleteShoppingCart",
-                    data: {id: itemId},
-                    type: "post",
-                    dataType: "json",
-                    xhrFields: {withCredentials: true},
-                    success(result) {
-                        if (result.code == "200") {
-                            $("#item" + itemId).remove();
-                        }
-                        else {
-                            layer.open({
-                                title: '错误'
-                                , content: result.message
-                            });
-                        }
-                    }
-                });
-                layer.close(index);
-
-            }
-            , btn2: function (index, layero) {
-                layer.close(index);
-            }});
-    }
-
-    function updateItemTotal(id) {
-        var price = parseFloat($("#price" + id).text());
-        var quantity = parseInt($("#quantity" + id).val());
-        $("#total" + id).text(price * quantity);
-    }
-    
     function updateTotal() {
-        var quantityTotal=0;
-        var priceTotal=0;
+        var quantityTotal = 0;
+        var priceTotal = 0;
         $(".item-quantity").each(function () {
-           quantityTotal+=parseInt($(this).val());
+            quantityTotal += parseInt($(this).text());
         });
         $(".item-total").each(function () {
-            priceTotal+=parseInt($(this).text());
+            priceTotal += parseInt($(this).text());
         });
         $("#total-price").text(priceTotal);
-        var averagePrice=priceTotal/quantityTotal
+        var averagePrice = priceTotal / quantityTotal
         $("#average-price").text(averagePrice.toFixed(2));
     }
 
@@ -211,24 +169,35 @@
         window.location.href = "/index";
     });
 
-    function createOrder() {
-        $.ajax({
-            url: "/shoppingCart/createOrder",
-            type: "post",
-            dataType: "json",
-            xhrFields: {withCredentials: true},
-            success(result) {
-                if (result.code == "200") {
-                    window.location.href=result.data
-                }
-                else {
-                    layer.open({
-                        title: '错误'
-                        , content: result.message
-                    });
-                }
-            }
-        });
-    }
+    $("#get-order").validate({
+        rules: {
+            userName: {
+                required: true,
+            },
+            phoneNumber: {
+                required: true,
+            },
+            city: {
+                required: true,
+            },
+            address: {
+                required: true,
+            },
+        },
+        messages: {
+            userName: {
+                required: "请输入您的姓名",
+            },
+            phoneNumber: {
+                required: "请输入您的手机号码",
+            },
+            city: {
+                required: "请输入收货的城市",
+            },
+            address: {
+                required: "请输入收货的具体地址",
+            },
+        }
+    });
 </script>
 </html>
