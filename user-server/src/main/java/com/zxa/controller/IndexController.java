@@ -5,8 +5,10 @@ import com.github.tobato.fastdfs.service.FastFileStorageClient;
 import com.zxa.common.ApplicationConstant;
 import com.zxa.common.ReturnEntity;
 import com.zxa.pojo.GoodsDto;
+import com.zxa.pojo.UserShoppingCartItem;
 import com.zxa.service.CategoryService;
 import com.zxa.service.GoodsService;
+import com.zxa.service.ShoppingCartService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,6 +25,8 @@ import java.util.List;
 public class IndexController {
     @Autowired
     CategoryService categoryService;
+    @Autowired
+    ShoppingCartService shoppingCartService;
     @Autowired
     FastFileStorageClient fastFileStorageClient;
     @Autowired
@@ -66,6 +70,18 @@ public class IndexController {
     public String contact(@PathVariable int id, Model model){
         model.addAttribute("category",categoryService.getCategory());
         return "contact";
+    }
+
+    @GetMapping(value = "/collection/{id}")
+    public String collection(@PathVariable int id, Model model){
+        List<UserShoppingCartItem> shoppingCartItems=shoppingCartService.getUserShoppingCartList(id);
+        if (shoppingCartItems.isEmpty()){
+            model.addAttribute("category",categoryService.getCategory());
+            return "shoppingCart_null";
+        }
+        model.addAttribute("category",categoryService.getCategory());
+        model.addAttribute("shoppingCartList",shoppingCartItems);
+        return "collection";
     }
 
     @ResponseBody

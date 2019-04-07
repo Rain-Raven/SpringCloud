@@ -51,7 +51,7 @@
 					</ul>
 					<p th:text="${good.complexDescribe}"></p>
 				    
-			         <a href="#" class="now-get">添加到购物车</a>
+			         <a th:href="@{'/shoppingCart/add/'+${good.id}}" class="now-get">添加到购物车</a>
 			        
 				</div>
           	    <div class="clearfix"> </div>

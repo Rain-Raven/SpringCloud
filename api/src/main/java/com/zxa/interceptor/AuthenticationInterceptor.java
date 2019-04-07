@@ -24,7 +24,7 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
 
     @Autowired
     private RedisTemplate redisTemplate;
-    @Value("${session.pre:session}")
+    @Value("${session.pre:session-}")
     private final String SESSION_ID_PRE="session";
     //不需要登录的接口控制
     private Set<Pattern> freeset = new HashSet<>();
@@ -38,12 +38,14 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
 
     {
         freeset.add(Pattern.compile("/images/*"));
+        freeset.add(Pattern.compile("/layui/*"));
         freeset.add(Pattern.compile("/js/*"));
         freeset.add(Pattern.compile("/css/*"));
         freeset.add(Pattern.compile("/user/*"));
         freeset.add(Pattern.compile("/index/*"));
         freeset.add(Pattern.compile("/error"));
         freeset.add(Pattern.compile("/goods"));
+        freeset.add(Pattern.compile("/shoppingCart/*"));
     }
 
     @Override
@@ -65,7 +67,7 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
             responseJsonMessage(response, standardGson.toJson(returnEntity));
             return false;
         }
-        User user = validateRedisLoginUser(sessionId);
+        User user = validateRedisLoginUser(SESSION_ID_PRE+sessionId);
         if (user == null) {
             responseJsonMessage(response, standardGson.toJson(ReturnEntity.error(ApplicationConstant.PLEASE_LOGIN)));
             return false;
@@ -77,14 +79,14 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
     /**
      * 获取登录的用户
      *
-     * @param sessionId
+     * @param redisKey
      * @return
      */
-    public User validateRedisLoginUser(String sessionId) {
-        if (StringUtils.isEmpty(sessionId)) {
+    public User validateRedisLoginUser(String redisKey) {
+        if (StringUtils.isEmpty(redisKey)) {
             return null;
         }
-        User user= (User) redisTemplate.opsForValue().get(sessionId);
+        User user= (User) redisTemplate.opsForValue().get(redisKey);
         return user;
     }
 

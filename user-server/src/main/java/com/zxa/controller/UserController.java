@@ -197,16 +197,7 @@ public class UserController {
                 response.addCookie(cookie);
             }
         }
-        /*Cookie userCookie=new Cookie(COOKIE_USER_NAME,null);
-        userCookie.setMaxAge(0);
-        userCookie.setDomain(WEB_SESSION_DOMAIN);
-        userCookie.setPath(WEB_SESSION_PATH);
-        response.addCookie(userCookie);
-        Cookie sessionCookie=new Cookie(COOKIE_SESSION_ID,null);
-        sessionCookie.setMaxAge(0);
-        sessionCookie.setDomain(WEB_SESSION_DOMAIN);
-        sessionCookie.setPath(WEB_SESSION_PATH);
-        response.addCookie(sessionCookie);*/
         return "redirect:/index";
     }
+
 }

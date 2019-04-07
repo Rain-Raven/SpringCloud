@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>Register</title>
+    <!--css-->
+    <link href="../css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/collection.css" th:href="@{/css/collection.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/form.css" th:href="@{/css/form.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/style.css" th:href="@{/css/style.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link th:href="@{/layui/css/layui.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!---->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!--js-->
+    <script src="../js/jquery-1.11.1.js" th:src="@{/js/jquery-1.11.1.js}"></script>
+    <script src="../js/jquery.validate.min.js" th:src="@{/js/jquery.validate.min.js}"></script>
+    <script src="../js/jquery.easydropdown.js" th:src="@{/js/jquery.easydropdown.js}"></script>
+    <script src="/js/jquery.cookie.js" th:src="@{/js/jquery.cookie.js}"></script>
+    <script src="/js/jquery.cookie.js" th:src="@{/layui/layui.all.js}"></script>
+    <!---->
+</head>
+<body>
+<!--header-->
+<div th:replace="../templates/header :: header"></div>
+<!--header end-->
+<!--sidebar-->
+<div th:replace="../templates/sidebar :: sidebar"></div>
+<!--sidebar end-->
+<div class="container">
+    <h1>购物车</h1>
+    <div class="goods-page">
+        <div class="goods-data clearfix">
+            <div class="table-wrapper-responsive">
+                <table summary="Shopping cart">
+                    <tbody>
+                    <tr>
+                        <th class="goods-page-header">图片</th>
+                        <th class="goods-page-header">描述</th>
+                        <th class="goods-page-header">数量</th>
+                        <th class="goods-page-header">单价</th>
+                        <th class="goods-page-header" colspan="2">总价</th>
+                    </tr>
+                    <tr th:each="item,itemStat : ${shoppingCartList}" th:id="'item'+${item.id}">
+                        <td class="goods-page-image">
+                            <a th:href="@{'/index/single/'+${item.goodsId}}"><img class="shopping-cart-image"
+                                                                                  th:src="'http://'+${item.image}"
+                                                                                  alt="Berry Lace Dress"></a>
+                        </td>
+                        <td class="goods-page-description">
+                            <h3><a th:href="@{'/index/single/'+${item.goodsId}}">[[${item.name}]]</a></h3>
+                            <em th:text="${item.simpleDescribe}"></em>
+                        </td>
+                        <td class="goods-page-quantity">
+                            <div class="product-quantity">
+                                <input th:id="'quantity'+${item.id}" type="number" th:value="${item.quantity}"
+                                       readonly="" class="form-control input-sm item-quantity">
+                            </div>
+                        </td>
+                        <td class="goods-page-price">
+                            <strong><span>￥</span></strong><strong th:id="'price'+${item.id}">[[${item.price}]]</strong>
+                        </td>
+                        <td class="goods-page-total">
+                            <strong><span>￥</span></strong><strong th:id="'total'+${item.id}" class="item-total">[[${item.price}*${item.quantity}]]</strong>
+                        </td>
+                        <td class="del-goods-col">
+                            <a class="del-goods" th:href="'javascript:del('+${item.id}+')'">&nbsp;</a>
+                            <a class="add-goods" th:href="'javascript:add('+${item.id}+')'">&nbsp;</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="cart-total">
+                <div class="shopping-total">
+                    <ul>
+                        <li style="font-size: 150%">
+                            <em>平均价</em>
+                            <strong><span>￥</span></strong><strong id="average-price" class="price">47.00</strong>
+                        </li>
+                        <li class="shopping-total-price" style="font-size: 150%">
+                            <em>总价</em>
+                            <strong><span>￥</span></strong><strong id="total-price" class="price">50.00</strong>
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn btn-default"  id="to-index" type="button">继续购物<i class="fa fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-primary" id="buy" type="button">结算<i class="fa fa-check"></i></button>
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!--footer-->
+        <div th:replace="../templates/footer :: footer"></div>
+        <!--footer end-->
+
+</body>
+<script>
+    $().ready(function () {
+        init();
+        updateTotal();
+// 在键盘按下并释放及提交后验证提交表单
+    });
+
+    function init() {
+        var userName = $.cookie('userName');
+        if (userName == null) {
+            $("#personInfo").hide();
+            $("#shoppingCartUrl").hide();
+            $("#exitUrl").hide();
+            $("#loginUrl").show();
+        }
+        else {
+            $("#personInfo").show();
+            $("#userName").text(userName);
+            $("#shoppingCartUrl").show();
+            $("#exitUrl").show();
+            $("#loginUrl").hide();
+        }
+    }
+
+    function add(itemId) {
+        var newValue = $("#quantity" + itemId).val();
+        newValue = parseInt(newValue) + 1;
+        $.ajax({
+            url: "/shoppingCart/updateQuantity",
+            data: {id: itemId, newQuantity: newValue},
+            type: "post",
+            dataType: "json",
+            xhrFields: {withCredentials: true},
+            success(result) {
+                if (result.code == "200") {
+                    $("#quantity" + itemId).val(result.data);
+                    updateItemTotal(itemId, result.data);
+                    updateTotal();
+                }
+                else {
+                    layer.open({
+                        title: '错误'
+                        , content: result.message
+                    });
+                }
+            }
+        });
+    }
+
+    function del(itemId) {
+        layer.confirm('确定要删除购物车条目？', {
+            btn: ['确定', '取消'] //可以无限个按钮
+            , yes: function (index, layero) {
+                $.ajax({
+                    url: "/shoppingCart/deleteShoppingCart",
+                    data: {id: itemId},
+                    type: "post",
+                    dataType: "json",
+                    xhrFields: {withCredentials: true},
+                    success(result) {
+                        if (result.code == "200") {
+                            $("#item" + itemId).remove();
+                        }
+                        else {
+                            layer.open({
+                                title: '错误'
+                                , content: result.message
+                            });
+                        }
+                    }
+                });
+                layer.close(index);
+
+            }
+            , btn2: function (index, layero) {
+                layer.close(index);
+            }});
+    }
+
+    function updateItemTotal(id) {
+        var price = parseFloat($("#price" + id).text());
+        var quantity = parseInt($("#quantity" + id).val());
+        $("#total" + id).text(price * quantity);
+    }
+    
+    function updateTotal() {
+        var quantityTotal=0;
+        var priceTotal=0;
+        $(".item-quantity").each(function () {
+           quantityTotal+=parseInt($(this).val());
+        });
+        $(".item-total").each(function () {
+            priceTotal+=parseInt($(this).text());
+        });
+        $("#total-price").text(priceTotal);
+        var averagePrice=priceTotal/quantityTotal
+        $("#average-price").text(averagePrice.toFixed(2));
+    }
+
+    $("#to-index").click(function () {
+        window.location.href = "/index";
+    });
+</script>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>Register</title>
+    <!--css-->
+    <link href="../css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/collection.css" th:href="@{/css/collection.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/form.css" th:href="@{/css/form.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/style.css" th:href="@{/css/style.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link th:href="@{/layui/css/layui.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!---->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!--js-->
+    <script src="../js/jquery-1.11.1.js" th:src="@{/js/jquery-1.11.1.js}"></script>
+    <script src="../js/jquery.validate.min.js" th:src="@{/js/jquery.validate.min.js}"></script>
+    <script src="../js/jquery.easydropdown.js" th:src="@{/js/jquery.easydropdown.js}"></script>
+    <script src="/js/jquery.cookie.js" th:src="@{/js/jquery.cookie.js}"></script>
+    <script src="/js/jquery.cookie.js" th:src="@{/layui/layui.all.js}"></script>
+    <!---->
+</head>
+<body>
+<!--header-->
+<div th:replace="../templates/header :: header"></div>
+<!--header end-->
+<!--sidebar-->
+<div th:replace="../templates/sidebar :: sidebar"></div>
+<!--sidebar end-->
+<div class="container">
+    <!-- BEGIN SIDEBAR & CONTENT -->
+    <div class="row margin-bottom-40">
+        <!-- BEGIN CONTENT -->
+            <h1>购物车</h1>
+            <div class="shopping-cart-page">
+                <div class="shopping-cart-data clearfix">
+                    <p style="padding-top: 50px;color: red">您当前还没有添加任何商品到购物车，再去逛逛吧!</p>
+                </div>
+            </div>
+        <!-- END CONTENT -->
+    </div>
+    <!-- END SIDEBAR & CONTENT -->
+
+</div>
+        <!--footer-->
+        <div th:replace="../templates/footer :: footer"></div>
+        <!--footer end-->
+
+</body>
+<script>
+    $().ready(function () {
+        init();
+// 在键盘按下并释放及提交后验证提交表单
+    });
+
+    function init() {
+        var userName = $.cookie('userName');
+        if (userName == null) {
+            $("#personInfo").hide();
+            $("#shoppingCartUrl").hide();
+            $("#exitUrl").hide();
+            $("#loginUrl").show();
+        }
+        else {
+            $("#personInfo").show();
+            $("#userName").text(userName);
+            $("#shoppingCartUrl").show();
+            $("#exitUrl").show();
+            $("#loginUrl").hide();
+        }
+    }
+
+    function add(itemId) {
+        var newValue = $("#quantity" + itemId).val();
+        newValue = parseInt(newValue) + 1;
+        $.ajax({
+            url: "/shoppingCart/updateQuantity",
+            data: {id: itemId, newQuantity: newValue},
+            type: "post",
+            dataType: "json",
+            xhrFields: {withCredentials: true},
+            success(result) {
+                if (result.code == "200") {
+                    $("#quantity" + itemId).val(result.data);
+                    updateItemTotal(itemId, result.data);
+                }
+                else {
+                    layer.open({
+                        title: '错误'
+                        , content: result.message
+                    });
+                }
+            }
+        });
+    }
+
+    function del(itemId) {
+        layer.confirm('确定要删除购物车条目？', {
+            btn: ['确定', '取消'] //可以无限个按钮
+            , yes: function (index, layero) {
+                $.ajax({
+                    url: "/shoppingCart/deleteShoppingCart",
+                    data: {id: itemId},
+                    type: "post",
+                    dataType: "json",
+                    xhrFields: {withCredentials: true},
+                    success(result) {
+                        if (result.code == "200") {
+                            $("#item" + itemId).remove();
+                        }
+                        else {
+                            layer.open({
+                                title: '错误'
+                                , content: result.message
+                            });
+                        }
+                    }
+                });
+                layer.close(index);
+
+            }
+            , btn2: function (index, layero) {
+                layer.close(index);
+            }});
+    }
+
+    function updateItemTotal(id) {
+        var price = parseFloat($("#price" + id).text());
+        var quantity = parseInt($("#quantity" + id).val());
+        $("#total" + id).text(price * quantity);
+    }
+</script>
+</html>

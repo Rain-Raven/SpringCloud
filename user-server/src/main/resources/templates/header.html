@@ -9,6 +9,7 @@
 </head>
 <body>
 <!--header-->
+<link th:href="@{/layui/css/layui.css}" rel="stylesheet" type="text/css" media="all"/>
 <div th:fragment="header">
 <div class="header">
     <div class="top-header">
@@ -16,11 +17,11 @@
             <div class="top-header-left">
                 <ul class="support">
                     <li><a href="#"><label> </label></a></li>
-                    <li><a href="#">24x7小时 在线<span class="live"> 支持</span></a></li>
+                    <li style="color: #ffffff">24x7小时 在线<span class="live"> 支持</span></li>
                 </ul>
                 <ul class="support">
                     <li class="van"><a href="#"><label> </label></a></li>
-                    <li><a href="#">快捷购物 <span class="live"></span></a></li>
+                    <li style="color: #ffffff">快捷购物 <span class="live"></span></li>
                 </ul>
                 <div class="clearfix"> </div>
             </div>
@@ -51,18 +52,18 @@
                     <a href="index" th:href="@{/index}"><img src="../images/logo.png" th:src="@{/images/logo.png}" alt="logo" /></a>
                 </div>
                 <div class="search">
-                    <input type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" >
-                    <input type="submit"  value="搜索" id="goods-search">
+                    <input type="text" onblur="if(!this.value)this.value='搜索您感兴趣的商品... ';return true;" onfocus="if(this.value=='搜索您感兴趣的商品... ')this.value='';return true;" value="搜索您感兴趣的商品... " >
+                    <input type="button" class="layui-btn"  value="搜索" id="goods-search" style="width: 73px">
 
                 </div>
                 <div class="clearfix"> </div>
             </div>
             <div class="header-bottom-right">
                 <ul class="men-grid">
-                    <li id="personInfo" ><a href="/index/login.html"><span ></span><div id="userName" style="display: inline-block;vertical-align: top;"></div></a></li>
+                    <li id="personInfo" ><span ></span><div id="userName" style="display: inline-block;vertical-align: top;"></div></li>
                     <li class="login" id="exitUrl"><a href="/user/userLoggedOut" th:href="@{/user/userLoggedOut}" ><span></span>退出</a></li>
                     <li class="login" id="loginUrl"><a href="/index/login" th:href="@{/index/login}" ><span></span>登陆</a></li>
-                    <li class="cart" id="shoppingCartUrl"><a href="#" ><span> </span>购物车</a></li>
+                    <li class="cart" id="shoppingCartUrl"><a th:href="@{/shoppingCart/myShoppingCart}" ><span> </span>购物车</a></li>
                 </ul>
             </div>
             <div class="clearfix"> </div>
